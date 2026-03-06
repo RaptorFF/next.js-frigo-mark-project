@@ -1,9 +1,9 @@
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import ServiceBooking from "./components/ServiceBooking";
-import Testimonials from "./components/Testimonials";
-import Pricing from "./components/Pricing";
-import ContactForm from "./components/ContactForm";
+import Hero from "./_components/Hero";
+import Services from "./_components/Services";
+import ServiceBooking from "./_components/ServiceBooking";
+import Testimonials from "./_components/Testimonials";
+import Pricing from "./_components/Pricing";
+import ContactForm from "./_components/ContactForm";
 
 export default function Home() {
   return (

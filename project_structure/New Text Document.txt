@@ -1,0 +1,38 @@
+hvac-business-app/
+├── public/                # Static assets (logos, icons, images)
+├── src/
+│   ├── components/        # Reusable UI components
+│   │   ├── Navbar.js
+│   │   ├── Hero.js
+│   │   ├── OfferCard.js
+│   │   ├── EquipmentCard.js
+│   │   ├── BookingForm.js
+│   │   ├── AdminSidebar.js
+│   │   └── UploadForm.js
+│   │
+│   ├── pages/             # Next.js pages (routes)
+│   │   ├── index.js       # Home page
+│   │   ├── offers.js      # Offers listing
+│   │   ├── products.js    # Equipment catalog
+│   │   ├── contact.js     # Booking form
+│   │   └── admin/
+│   │       ├── dashboard.js
+│   │       ├── offers.js
+│   │       ├── equipment.js
+│   │       └── bookings.js
+│   │
+│   ├── lib/               # Supabase + helpers
+│   │   ├── supabaseClient.js
+│   │   ├── auth.js
+│   │   └── api.js
+│   │
+│   ├── styles/            # Tailwind + global styles
+│   │   └── globals.css
+│   │
+│   └── utils/             # Utility functions
+│       └── validators.js
+│
+├── .env.local             # Supabase keys, secrets
+├── tailwind.config.js
+├── package.json
+└── README.md

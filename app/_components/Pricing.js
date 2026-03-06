@@ -1,4 +1,4 @@
-import { pricingPlans } from "@/app/data/pricing";
+import { pricingPlans } from "@/app/_data/pricing";
 
 export default function Pricing() {
   return (

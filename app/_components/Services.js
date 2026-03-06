@@ -1,4 +1,4 @@
-import { services } from "@/app/data/services";
+import { services } from "@/app/_data/services";
 
 export default function Services() {
   return (
