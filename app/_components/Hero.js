@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
-    <section className="pt-32 pb-24 bg-linear-to-r from-blue-600 to-blue-900 text-white">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+    <section className=" pt-32 pb-24 bg-linear-to-r from-blue-600 to-blue-900 text-white">
+      <div className="mx-auto px-6 sm:px-8 lg:px-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
