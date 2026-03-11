@@ -30,20 +30,23 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="section-container bg-white">
+    <section
+      id="contact"
+      className="section-container bg-white flex flex-col items-center"
+    >
       <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
             Get In Touch
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Have questions? We'd love to hear from you
+            Have questions? We&apos;d love to hear from you
           </p>
         </div>
 
         {submitted && (
           <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-            Thank you! We'll contact you soon.
+            Thank you! We&apos;ll contact you soon.
           </div>
         )}
 

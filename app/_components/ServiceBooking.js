@@ -42,7 +42,7 @@ export default function ServiceBooking() {
   };
 
   return (
-    <section className="section-container bg-blue-50">
+    <section className="section-container bg-blue-50 flex flex-col items-center">
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">

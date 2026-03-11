@@ -2,7 +2,10 @@ import { services } from "@/app/_data/services";
 
 export default function Services() {
   return (
-    <section id="services" className="section-container bg-gray-50">
+    <section
+      id="services"
+      className="section-container bg-gray-50 flex flex-col items-center"
+    >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">

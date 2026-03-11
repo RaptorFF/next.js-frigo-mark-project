@@ -2,7 +2,10 @@ import { testimonials } from "@/app/_data/testimonials";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="section-container bg-white">
+    <section
+      id="testimonials"
+      className="section-container bg-white flex flex-col items-center"
+    >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
