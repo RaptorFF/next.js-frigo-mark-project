@@ -21,19 +21,28 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10 text-lg font-medium">
-            <Link href="#services" className="hover:text-blue-100 transition">
+            <Link
+              href="#services"
+              className="hover:text-blue-100 transition px-4 py-2"
+            >
               Services
             </Link>
-            <Link href="#pricing" className="hover:text-blue-100 transition">
+            <Link
+              href="#pricing"
+              className="hover:text-blue-100 transition px-4 py-2"
+            >
               Pricing
             </Link>
             <Link
               href="#testimonials"
-              className="hover:text-blue-100 transition"
+              className="hover:text-blue-100 transition px-4 py-2"
             >
               Testimonials
             </Link>
-            <Link href="#contact" className="hover:text-blue-100 transition">
+            <Link
+              href="#contact"
+              className="hover:text-blue-100 transition px-4 py-2"
+            >
               Contact
             </Link>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-md hover:shadow-lg">
@@ -67,25 +76,25 @@ export default function Header() {
           <nav className="md:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 text-lg font-medium">
             <a
               href="#services"
-              className="block py-2 hover:text-blue-100 transition"
+              className="block px-4 py-2 hover:text-blue-100 transition"
             >
               Services
             </a>
             <a
               href="#pricing"
-              className="block py-2 hover:text-blue-100 transition"
+              className="block px-4 py-2 hover:text-blue-100 transition"
             >
               Pricing
             </a>
             <a
               href="#testimonials"
-              className="block py-2 hover:text-blue-100 transition"
+              className="block px-4 py-2 hover:text-blue-100 transition"
             >
               Testimonials
             </a>
             <a
               href="#contact"
-              className="block py-2 hover:text-blue-100 transition"
+              className="block px-4 py-2 hover:text-blue-100 transition"
             >
               Contact
             </a>
