@@ -11,7 +11,7 @@ export default function Services() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
             Our Services
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 mx-auto leading-relaxed text-center py-4">
             Comprehensive HVAC solutions tailored to your needs
           </p>
         </div>

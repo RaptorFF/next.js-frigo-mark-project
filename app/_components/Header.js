@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="fixed w-full bg-linear-to-r from-blue-600 to-blue-800 text-white shadow-lg z-50 border-b border-blue-700">
       <div className="mx-auto">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-20 px-4 md:px-8">
           {/* Logo */}
           <Link
             href="/"
