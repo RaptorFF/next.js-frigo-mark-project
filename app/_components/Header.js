@@ -15,7 +15,7 @@ export default function Header() {
             href="/"
             className="flex items-center space-x-3 text-2xl font-bold hover:text-blue-100 transition tracking-tight"
           >
-            <span className="text-3xl">❄️</span>
+            <span className="text-3xl p-1">❄️</span>
             <span>FrigoMark</span>
           </Link>
 
