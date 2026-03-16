@@ -23,20 +23,4 @@ export const testimonials = [
     rating: 5,
     image: "👨",
   },
-  {
-    id: 4,
-    name: "Emily Rodriguez",
-    title: "Homeowner",
-    text: "The thermostat installation was smooth. They explained everything and even showed me how to use the smart features.",
-    rating: 5,
-    image: "👩",
-  },
-  {
-    id: 5,
-    name: "Robert Chen",
-    title: "Restaurant Owner",
-    text: "Excellent service for our walk-in coolers. CoolAir keeps our business running smoothly.",
-    rating: 5,
-    image: "👨",
-  },
 ];

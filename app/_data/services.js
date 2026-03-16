@@ -35,31 +35,4 @@ export const services = [
       "Performance optimization",
     ],
   },
-  {
-    id: 4,
-    title: "Ductwork Cleaning",
-    description:
-      "Professional duct cleaning to improve air quality and efficiency",
-    icon: "💨",
-    features: ["EPA certified", "Improves air quality", "Reduces energy costs"],
-  },
-  {
-    id: 5,
-    title: "Thermostat Installation",
-    description:
-      "Smart thermostat setup for better climate control and savings",
-    icon: "🌡️",
-    features: [
-      "Smart home compatible",
-      "Remote control",
-      "Energy savings up to 15%",
-    ],
-  },
-  {
-    id: 6,
-    title: "Emergency HVAC Service",
-    description: "24/7 emergency service for urgent heating and cooling needs",
-    icon: "🚨",
-    features: ["24/7 availability", "Rapid response", "Expert diagnosis"],
-  },
 ];
