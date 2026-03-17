@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -9,13 +11,13 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-6 flex items-center space-x-2 leading-tight">
               <span className="text-2xl">❄️</span>
-              <span>CoolAir</span>
+              <span>FrigoMark</span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
               Your trusted HVAC service provider for over 20 years.
             </p>
-            <p className="text-gray-400 mt-4 text-sm">📞 1-800-COOLAIR</p>
-            <p className="text-gray-400 text-sm">✉️ info@coolairservices.com</p>
+            <p className="text-gray-400 mt-4 text-sm">📞 1-800-FRIGOMARK</p>
+            <p className="text-gray-400 text-sm">✉️ info@frigomark.com</p>
           </div>
 
           {/* Services */}
@@ -104,27 +106,33 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-12 mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm space-y-4 md:space-y-0">
             <p>
-              &copy; {currentYear} CoolAir HVAC Services. All rights reserved.
+              &copy; {currentYear} FrigoMark HVAC Services. All rights reserved.
             </p>
             <div className="flex space-x-8 mt-4 md:mt-0">
-              <a
+              <Link
                 href="#"
                 className="hover:text-white transition hover:underline"
               >
                 Facebook
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="hover:text-white transition hover:underline"
               >
                 Twitter
-              </a>
-              <a href="#" className="hover:text-white transition">
+              </Link>
+              <Link
+                href="#"
+                className="hover:text-white transition hover:underline"
+              >
                 LinkedIn
-              </a>
-              <a href="#" className="hover:text-white transition">
+              </Link>
+              <Link
+                href="#"
+                className="hover:text-white transition hover:underline"
+              >
                 Instagram
-              </a>
+              </Link>
             </div>
           </div>
         </div>
