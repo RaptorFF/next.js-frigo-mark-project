@@ -11,7 +11,7 @@ export default function Pricing() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
             Maintenance Plans
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 mx-auto leading-relaxed py-4 pb-8">
             Choose the perfect plan for your needs
           </p>
         </div>

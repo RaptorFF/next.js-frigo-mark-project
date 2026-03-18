@@ -48,7 +48,7 @@ export default function ServiceBooking() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
             Book Your Service
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed py-4">
             Schedule your appointment quickly and easily
           </p>
         </div>

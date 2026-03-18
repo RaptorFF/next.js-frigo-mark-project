@@ -39,7 +39,7 @@ export default function ContactForm() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
             Get In Touch
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed py-4">
             Have questions? We&apos;d love to hear from you
           </p>
         </div>

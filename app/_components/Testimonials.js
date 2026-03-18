@@ -11,7 +11,7 @@ export default function Testimonials() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
             What Our Customers Say
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 mx-auto leading-relaxed py-4">
             Real reviews from satisfied customers
           </p>
         </div>
