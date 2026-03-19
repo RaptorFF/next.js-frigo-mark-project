@@ -5,10 +5,10 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight text-left">
               Your Home Comfort Experts
             </h1>
-            <p className="text-lg text-blue-100 leading-relaxed">
+            <p className="text-lg text-blue-100 leading-relaxed text-left">
               Professional HVAC services for heating, cooling, and air quality.
               Available 24/7 for emergencies.
             </p>
