@@ -25,28 +25,28 @@ export default function Header() {
               href="#services"
               className="hover:text-blue-100 transition px-4 py-2"
             >
-              Services
+              Usluge
             </Link>
             <Link
               href="#pricing"
               className="hover:text-blue-100 transition px-4 py-2"
             >
-              Pricing
+              Cenovnik
             </Link>
             <Link
               href="#testimonials"
               className="hover:text-blue-100 transition px-4 py-2"
             >
-              Testimonials
+              Mišljenja Klijenata
             </Link>
             <Link
               href="#contact"
               className="hover:text-blue-100 transition px-4 py-2"
             >
-              Contact
+              Kontakt
             </Link>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-md hover:shadow-lg">
-              Book Service
+              Rezerviši Uslugu
             </button>
           </nav>
 
@@ -78,28 +78,28 @@ export default function Header() {
               href="#services"
               className="block px-4 py-2 hover:text-blue-100 transition"
             >
-              Services
+              Usluge
             </a>
             <a
               href="#pricing"
               className="block px-4 py-2 hover:text-blue-100 transition"
             >
-              Pricing
+              Cenovnik
             </a>
             <a
               href="#testimonials"
               className="block px-4 py-2 hover:text-blue-100 transition"
             >
-              Testimonials
+              Mišljenja Klijenata
             </a>
             <a
               href="#contact"
               className="block px-4 py-2 hover:text-blue-100 transition"
             >
-              Contact
+              Kontakt
             </a>
             <button className="w-full bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition">
-              Book Service
+              Rezerviši Uslugu
             </button>
           </nav>
         )}

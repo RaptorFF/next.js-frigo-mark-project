@@ -6,32 +6,32 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight text-left">
-              Your Home Comfort Experts
+              Budi Cool sa Frigo Mark HVAC Uslugama
             </h1>
             <p className="text-lg text-blue-100 leading-relaxed text-left">
-              Professional HVAC services for heating, cooling, and air quality.
-              Available 24/7 for emergencies.
+              Profesionalne HVAC usluge za grejanje, hlađenje i kvalitet
+              vazduha. Dostupni 24/7 za hitne slučajeve.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 pt-6">
               <button className="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold hover:bg-blue-50 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
-                Book Service Now
+                Rezerviši Uslugu
               </button>
               <button className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition">
-                Learn More
+                Saznaj Više
               </button>
             </div>
             <div className="flex flex-col sm:flex-row gap-12 pt-10 text-base">
               <div>
                 <p className="text-2xl font-bold">24/7</p>
-                <p className="text-blue-200">Emergency Service</p>
+                <p className="text-blue-200">Hitne Intervencije</p>
               </div>
               <div>
                 <p className="text-2xl font-bold">20+</p>
-                <p className="text-blue-200">Years Experience</p>
+                <p className="text-blue-200">Godina Iskustva</p>
               </div>
               <div>
                 <p className="text-2xl font-bold">5★</p>
-                <p className="text-blue-200">Customer Rated</p>
+                <p className="text-blue-200">Ocena Kupaca</p>
               </div>
             </div>
           </div>
