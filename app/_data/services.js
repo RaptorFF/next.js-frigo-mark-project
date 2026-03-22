@@ -1,38 +1,37 @@
 export const services = [
   {
     id: 1,
-    title: "Air Conditioning Installation",
+    title: "Instalacija Klima Uređaja",
     description:
-      "Professional installation of new AC units with expert technician support",
+      "Profesionalna instalacija novih klima uređaja uz podršku stručnih tehničara",
     icon: "❄️",
     features: [
-      "Same-day installation",
-      "10-year warranty",
-      "Energy-efficient models",
+      "Instalacija istog dana",
+      "10-godišnja garancija",
+      "Energetski efikasni modeli",
     ],
   },
   {
     id: 2,
-    title: "Heating System Repair",
-    description:
-      "Emergency repairs for furnaces, heat pumps, and heating systems",
+    title: "Popravka Grejanja",
+    description: "Hitne popravke za peći, toplotne pumpe i grejne sisteme",
     icon: "🔥",
     features: [
-      "24/7 emergency service",
-      "Same-day response",
-      "Parts warranty included",
+      "24/7 hitne intervencije",
+      "Odgovor istog dana",
+      "Uključena garancija delova",
     ],
   },
   {
     id: 3,
-    title: "HVAC Maintenance",
+    title: "Održavanje HVAC Sistema",
     description:
-      "Regular maintenance to keep your systems running smoothly year-round",
+      "Redovno održavanje kako bi vaši sistemi radili glatko tokom cele godine",
     icon: "🔧",
     features: [
-      "Seasonal check-ups",
-      "Filter replacement",
-      "Performance optimization",
+      "Sezonski pregledi",
+      "Zamena filtera",
+      "Optimizacija performansi",
     ],
   },
 ];

@@ -9,10 +9,10 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            Our Services
+            Naše Usluge
           </h2>
           <p className="text-lg text-gray-600 mx-auto leading-relaxed text-center py-4">
-            Comprehensive HVAC solutions tailored to your needs
+            Sveobuhvatna HVAC rešenja prilagođena vašim potrebama
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function Services() {
                 ))}
               </ul>
               <button className="w-full mt-6 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold hover:shadow-md">
-                Learn More
+                Saznajte Više
               </button>
             </div>
           ))}

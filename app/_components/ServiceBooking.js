@@ -46,17 +46,17 @@ export default function ServiceBooking() {
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            Book Your Service
+            Rezervišite Svoju Uslugu HVAC Danas
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed py-4">
-            Schedule your appointment quickly and easily
+            Rezervišite svoj termin brzo i jednostavno
           </p>
         </div>
 
         {booked && (
           <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-            ✓ Your appointment has been scheduled! We&apos;ll confirm via email
-            shortly.
+            ✓ Vaš termin je uspešno zakazan! Potvrdu ćete uskoro dobiti putem
+            e-pošte.
           </div>
         )}
 
@@ -67,7 +67,7 @@ export default function ServiceBooking() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Service Type *
+                Tip Usluge *
               </label>
               <select
                 name="serviceType"
@@ -76,18 +76,18 @@ export default function ServiceBooking() {
                 required
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
               >
-                <option value="">Select service</option>
-                <option value="installation">AC Installation</option>
-                <option value="repair">Heating Repair</option>
-                <option value="maintenance">HVAC Maintenance</option>
-                <option value="cleaning">Ductwork Cleaning</option>
-                <option value="thermostat">Thermostat Installation</option>
-                <option value="emergency">Emergency Service</option>
+                <option value="">Izaberite uslugu</option>
+                <option value="installation">Instalacija Klima Uređaja</option>
+                <option value="repair">Popravka Grejanja</option>
+                <option value="maintenance">Održavanje HVAC Sistema</option>
+                <option value="cleaning">Čišćenje Kanala</option>
+                <option value="thermostat">Instalacija Termostata</option>
+                <option value="emergency">Hitna Usluga</option>
               </select>
             </div>
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Preferred Date *
+                Preferirani Datum *
               </label>
               <input
                 type="date"
@@ -103,7 +103,7 @@ export default function ServiceBooking() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Preferred Time *
+                Preferirano Vreme *
               </label>
               <input
                 type="time"
@@ -116,7 +116,7 @@ export default function ServiceBooking() {
             </div>
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Full Name *
+                Puno Ime *
               </label>
               <input
                 type="text"
@@ -147,7 +147,7 @@ export default function ServiceBooking() {
             </div>
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Phone Number *
+                Broj Telefona *
               </label>
               <input
                 type="tel"
@@ -163,7 +163,7 @@ export default function ServiceBooking() {
 
           <div>
             <label className="block text-gray-700 font-semibold mb-3">
-              Service Address *
+              Adresa Usluge *
             </label>
             <input
               type="text"
@@ -178,7 +178,7 @@ export default function ServiceBooking() {
 
           <div>
             <label className="block text-gray-700 font-semibold mb-3">
-              Additional Notes
+              Dodatne Napomene
             </label>
             <textarea
               name="notes"
@@ -186,7 +186,7 @@ export default function ServiceBooking() {
               onChange={handleChange}
               rows="5"
               className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition resize-none"
-              placeholder="Tell us about your HVAC system or any special requirements..."
+              placeholder="Recite nam nešto o vašem HVAC sistemu ili bilo kojim posebnim zahtevima..."
             ></textarea>
           </div>
 
@@ -194,7 +194,7 @@ export default function ServiceBooking() {
             type="submit"
             className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition text-lg shadow-md hover:shadow-lg"
           >
-            Confirm Booking
+            Potvrdite Rezervaciju
           </button>
         </form>
       </div>
