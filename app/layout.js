@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "CoolAir - Professional HVAC Services",
+  title: "FrigoMark - Profesionalne usluge klimatizacije i grejanja",
   description:
     "Professional HVAC installation, repair, and maintenance services. 24/7 emergency support available.",
 };

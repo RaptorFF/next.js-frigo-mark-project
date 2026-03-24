@@ -10,10 +10,9 @@ export default function Home() {
     <>
       <Hero />
       <Services />
-      <ServiceBooking />
-      <Testimonials />
       <Pricing />
-      <ContactForm />
+      <Testimonials />
+      <ServiceBooking />
     </>
   );
 }
