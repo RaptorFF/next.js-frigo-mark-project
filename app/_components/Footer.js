@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white py-16 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+      <div className="mx-auto px-6 sm:px-8 lg:px-10">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
@@ -108,30 +109,37 @@ export default function Footer() {
             <p>
               &copy; {currentYear} FrigoMark HVAC Services. All rights reserved.
             </p>
-            <div className="flex space-x-8 mt-4 md:mt-0">
+            <div
+              className="flex mt-4 md:mt-0 text-2xl"
+              style={{ gap: "1.5rem" }}
+            >
               <Link
                 href="#"
-                className="hover:text-white transition hover:underline"
+                className="hover:text-white transition"
+                aria-label="Facebook"
               >
-                Facebook
+                <FaFacebook />
               </Link>
               <Link
                 href="#"
-                className="hover:text-white transition hover:underline"
+                className="hover:text-white transition"
+                aria-label="Twitter"
               >
-                Twitter
+                <FaTwitter />
               </Link>
               <Link
                 href="#"
-                className="hover:text-white transition hover:underline"
+                className="hover:text-white transition"
+                aria-label="LinkedIn"
               >
-                LinkedIn
+                <FaLinkedin />
               </Link>
               <Link
                 href="#"
-                className="hover:text-white transition hover:underline"
+                className="hover:text-white transition"
+                aria-label="Instagram"
               >
-                Instagram
+                <FaInstagram />
               </Link>
             </div>
           </div>
