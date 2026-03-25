@@ -15,7 +15,7 @@ export default function Footer() {
               <span>FrigoMark</span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Your trusted HVAC service provider for over 20 years.
+              Vaš pouzdani HVAC servis provider već više od 20 godina.
             </p>
             <p className="text-gray-400 mt-4 text-sm">📞 1-800-FRIGOMARK</p>
             <p className="text-gray-400 text-sm">✉️ info@frigomark.com</p>
@@ -23,26 +23,26 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-bold mb-6 leading-tight">Services</h4>
+            <h4 className="text-lg font-bold mb-6 leading-tight">Usluge</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li>
                 <a href="#" className="hover:text-white transition">
-                  AC Installation
+                  Instalacija klima uređaja
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition">
-                  Heating Repair
+                  Popravka grejanja
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition">
-                  Maintenance Plans
+                  Planovi održavanja
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition">
-                  Emergency Service
+                  Hitne intervencije
                 </a>
               </li>
             </ul>
@@ -50,16 +50,16 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-lg font-bold mb-6 leading-tight">Company</h4>
+            <h4 className="text-lg font-bold mb-6 leading-tight">Kompanija</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li>
                 <a href="#" className="hover:text-white transition">
-                  About Us
+                  O nama
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition">
-                  Careers
+                  Karijere
                 </a>
               </li>
               <li>
@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-white transition">
-                  Contact
+                  Kontakt
                 </a>
               </li>
             </ul>
@@ -77,21 +77,21 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-lg font-bold mb-6 leading-tight">Legal</h4>
+            <h4 className="text-lg font-bold mb-6 leading-tight">Pravno</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li>
                 <a href="#" className="hover:text-white transition">
-                  Privacy Policy
+                  Politika privatnosti
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition">
-                  Terms of Service
+                  Uslovi korišćenja
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition">
-                  Warranty
+                  Garancija
                 </a>
               </li>
               <li>
@@ -107,12 +107,9 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-12 mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm space-y-4 md:space-y-0">
             <p>
-              &copy; {currentYear} FrigoMark HVAC Services. All rights reserved.
+              &copy; {currentYear} FrigoMark HVAC Usluge. Sva prava zadržana.
             </p>
-            <div
-              className="flex mt-4 md:mt-0 text-2xl"
-              style={{ gap: "1.5rem" }}
-            >
+            <div className="flex mt-4 md:mt-0 text-2xl" style={{ gap: "1rem" }}>
               <Link
                 href="#"
                 className="hover:text-white transition"
