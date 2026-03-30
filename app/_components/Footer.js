@@ -106,9 +106,6 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-700 pt-12 mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm space-y-4 md:space-y-0">
-            <p>
-              &copy; {currentYear} FrigoMark HVAC Usluge. Sva prava zadržana.
-            </p>
             <div className="flex mt-4 md:mt-0 text-2xl" style={{ gap: "1rem" }}>
               <Link
                 href="#"
@@ -139,6 +136,9 @@ export default function Footer() {
                 <FaInstagram />
               </Link>
             </div>
+            <p>
+              &copy; {currentYear} FrigoMark HVAC Usluge. Sva prava zadržana.
+            </p>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight text-left">
-              Budi Cool sa Frigo Mark HVAC Uslugama
+              Budi Cool sa FrigoMark HVAC Uslugama
             </h1>
             <p className="text-lg text-blue-100 leading-relaxed text-left">
               Profesionalne HVAC usluge za grejanje, hlađenje i kvalitet
