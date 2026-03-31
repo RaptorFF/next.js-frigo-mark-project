@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="pb-24 bg-linear-to-r from-blue-600 to-blue-900 text-white h-screen flex flex-col justify-center items-center text-center">
+    <section className="pb-24 bg-linear-to-r from-blue-600 to-blue-900 text-white h-screen flex flex-col justify-end items-center text-center">
       <div className="mx-auto px-6 sm:px-8 lg:px-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left Content */}

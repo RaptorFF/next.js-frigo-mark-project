@@ -1,3 +1,12 @@
+/* Transparent/Solid Header custom classes */
+.header-transparent {
+  background: transparent !important;
+  backdrop-filter: none;
+}
+.header-solid {
+  background: linear-gradient(to right, #2563eb, #1e40af) !important;
+  backdrop-filter: blur(0.5px);
+}
 @import "tailwindcss";
 
 * {

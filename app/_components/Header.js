@@ -1,13 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsTop(window.scrollY === 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="fixed w-full bg-linear-to-r from-blue-600 to-blue-800 text-white shadow-lg z-50 border-b border-blue-700">
+    <header
+      className={`fixed w-full text-white z-50 transition-all duration-300
+          ${isTop ? "bg-transparent header-transparent border-b border-transparent" : "bg-linear-to-r from-blue-600 to-blue-800 header-solid border-b border-blue-700"}`}
+    >
       <div className="mx-auto">
         <div className="flex justify-between items-center h-20 px-4 md:px-8">
           {/* Logo */}
@@ -20,7 +32,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10 text-lg font-medium">
+          <nav className="hidden md:flex items-center space-x-4 text-lg font-medium">
             <Link
               href="#services"
               className="hover:text-blue-100 transition px-4 py-2"
