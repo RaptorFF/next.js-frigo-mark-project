@@ -81,7 +81,6 @@ export default function ContactForm() {
               />
             </div>
           </div>
-          \n\n{" "}
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
