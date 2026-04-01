@@ -56,7 +56,7 @@ export default function Header() {
               Mišljenja Klijenata
             </Link>
             <Link
-              href="#contact"
+              href="/contact"
               className="hover:text-blue-100 transition px-4 py-2"
             >
               Kontakt
@@ -109,7 +109,7 @@ export default function Header() {
               Mišljenja Klijenata
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="block px-4 py-2 hover:text-blue-100 transition"
             >
               Kontakt
