@@ -17,8 +17,12 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full text-white z-50 transition-all duration-300
-          ${isTop ? "bg-transparent header-transparent border-b border-transparent" : "bg-linear-to-r from-blue-600 to-blue-800 header-solid border-b border-blue-700"}`}
+      className={`fixed w-full text-white z-50 transition-all duration-500
+        ${
+          isTop
+            ? "bg-transparent header-transparent border-b border-transparent"
+            : "bg-linear-to-r from-blue-600 to-blue-800 header-solid border-b border-blue-700 fade-in-up header-blur-shadow"
+        }`}
     >
       <div className="mx-auto">
         <div className="flex justify-between items-center h-20 px-4 md:px-8">
