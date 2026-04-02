@@ -9,7 +9,7 @@ import Hero1 from "./_components/Hero1";
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero1 />
       <Services />
       <Pricing />
       <Testimonials />

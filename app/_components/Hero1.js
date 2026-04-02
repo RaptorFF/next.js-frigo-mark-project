@@ -1,16 +1,15 @@
-import Image from "next/image";
-import backgroundImage from "@/public/upscaled.png";
-
 export default function Hero1() {
   return (
-    <section className="pb-24 h-screen">
-      <Image
-        className="object-cover object-top" //object-cover makes sure the image covers the entire area, object-top makes sure the top of the image is visible
-        src={backgroundImage}
-        alt="Hero Image"
-        fill // makes the image fill the parent container, which is the main element in this case
-        placeholder="blur" // adds a blur effect while the image is loading, improving perceived performance
-      />
+    <section className="relative w-full h-screen overflow-hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover z-[-1]"
+      >
+        <source src="airflow.mp4" type="video/mp4" />
+      </video>
     </section>
   );
 }
