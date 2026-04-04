@@ -27,16 +27,7 @@ export default function Hero() {
           </button>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-12 pt-10 text-base">
-          <div>
-            <p className="text-xl font-bold">20+</p>
-            <p className="text-blue-200">Godina Iskustva</p>
-          </div>
-          <div>
-            <p className="text-xl font-bold">5★</p>
-            <p className="text-blue-200">Ocena Kupaca</p>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
