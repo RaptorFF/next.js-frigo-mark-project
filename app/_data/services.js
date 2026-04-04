@@ -17,7 +17,7 @@ export const services = [
     description: "Hitne popravke za peći, toplotne pumpe i grejne sisteme",
     icon: "🔥",
     features: [
-      "24/7 hitne intervencije",
+      "Hitne intervencije",
       "Odgovor istog dana",
       "Uključena garancija delova",
     ],

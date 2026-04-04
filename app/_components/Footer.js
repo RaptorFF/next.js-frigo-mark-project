@@ -15,7 +15,7 @@ export default function Footer() {
               <span>FrigoMark</span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Vaš pouzdani HVAC servis provider već više od 20 godina.
+              Vaš pouzdani HVAC servis provajder već više od 20 godina.
             </p>
             <p className="text-gray-400 mt-4 text-sm">📞 1-800-FRIGOMARK</p>
             <p className="text-gray-400 text-sm">✉️ info@frigomark.com</p>

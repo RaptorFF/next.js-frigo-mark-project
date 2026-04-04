@@ -125,7 +125,7 @@ export default function ServiceBooking() {
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
-                placeholder="John Doe"
+                placeholder="Petar Petrović"
               />
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function ServiceBooking() {
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
-                placeholder="john@example.com"
+                placeholder="petar.petrovic@example.com"
               />
             </div>
             <div>
@@ -156,7 +156,7 @@ export default function ServiceBooking() {
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
-                placeholder="(555) 123-4567"
+                placeholder="(123) 456-7890"
               />
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function ServiceBooking() {
               onChange={handleChange}
               required
               className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
-              placeholder="123 Main St, City, State 12345"
+              placeholder="Ulica i broj, Grad"
             />
           </div>
 
