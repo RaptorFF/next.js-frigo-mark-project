@@ -37,24 +37,24 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 text-lg font-medium">
-            <Link
-              href="#services"
+            <a
+              href="/#services"
               className="hover:text-blue-100 transition px-4 py-2"
             >
               Usluge
-            </Link>
-            <Link
-              href="#pricing"
+            </a>
+            <a
+              href="/#pricing"
               className="hover:text-blue-100 transition px-4 py-2"
             >
               Cenovnik
-            </Link>
-            <Link
-              href="#testimonials"
+            </a>
+            <a
+              href="/#testimonials"
               className="hover:text-blue-100 transition px-4 py-2"
             >
               Mišljenja Klijenata
-            </Link>
+            </a>
             <Link
               href="/contact"
               className="hover:text-blue-100 transition px-4 py-2"
@@ -91,20 +91,23 @@ export default function Header() {
         {mobileMenuOpen && (
           <nav className="md:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 text-lg font-medium">
             <a
-              href="#services"
+              href="/#services"
               className="block px-4 py-2 hover:text-blue-100 transition"
+              onClick={() => setMobileMenuOpen(false)}
             >
               Usluge
             </a>
             <a
-              href="#pricing"
+              href="/#pricing"
               className="block px-4 py-2 hover:text-blue-100 transition"
+              onClick={() => setMobileMenuOpen(false)}
             >
               Cenovnik
             </a>
             <a
-              href="#testimonials"
+              href="/#testimonials"
               className="block px-4 py-2 hover:text-blue-100 transition"
+              onClick={() => setMobileMenuOpen(false)}
             >
               Mišljenja Klijenata
             </a>
