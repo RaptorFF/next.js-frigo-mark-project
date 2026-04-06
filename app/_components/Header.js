@@ -37,24 +37,24 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 text-lg font-medium">
-            <a
+            <Link
               href="/#services"
               className="hover:text-blue-100 transition px-4 py-2"
             >
               Usluge
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#pricing"
               className="hover:text-blue-100 transition px-4 py-2"
             >
               Cenovnik
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#testimonials"
               className="hover:text-blue-100 transition px-4 py-2"
             >
               Mišljenja Klijenata
-            </a>
+            </Link>
             <Link
               href="/contact"
               className="hover:text-blue-100 transition px-4 py-2"
@@ -90,33 +90,33 @@ export default function Header() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <nav className="md:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 text-lg font-medium">
-            <a
+            <Link
               href="/#services"
               className="block px-4 py-2 hover:text-blue-100 transition"
               onClick={() => setMobileMenuOpen(false)}
             >
               Usluge
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#pricing"
               className="block px-4 py-2 hover:text-blue-100 transition"
               onClick={() => setMobileMenuOpen(false)}
             >
               Cenovnik
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#testimonials"
               className="block px-4 py-2 hover:text-blue-100 transition"
               onClick={() => setMobileMenuOpen(false)}
             >
               Mišljenja Klijenata
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               className="block px-4 py-2 hover:text-blue-100 transition"
             >
               Kontakt
-            </a>
+            </Link>
             <button className="w-full bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition">
               Rezerviši Uslugu
             </button>
