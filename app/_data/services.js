@@ -1,7 +1,7 @@
 export const services = [
   {
     id: 1,
-    title: "Instalacija Klima Uređaja",
+    title: "Instalacija klima uređaja",
     description:
       "Profesionalna instalacija novih klima uređaja uz podršku stručnih tehničara",
     icon: "❄️",
@@ -13,7 +13,7 @@ export const services = [
   },
   {
     id: 2,
-    title: "Popravka Grejanja",
+    title: "Popravka grejanja",
     description: "Hitne popravke za peći, toplotne pumpe i grejne sisteme",
     icon: "🔥",
     features: [
@@ -24,7 +24,7 @@ export const services = [
   },
   {
     id: 3,
-    title: "Održavanje HVAC Sistema",
+    title: "Održavanje HVAC sistema",
     description:
       "Redovno održavanje kako bi vaši sistemi radili glatko tokom cele godine",
     icon: "🔧",

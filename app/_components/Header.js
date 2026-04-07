@@ -53,7 +53,7 @@ export default function Header() {
               href="/#testimonials"
               className="hover:text-blue-100 transition px-4 py-2"
             >
-              Mišljenja Klijenata
+              Mišljenja klijenata
             </Link>
             <Link
               href="/contact"
@@ -62,7 +62,7 @@ export default function Header() {
               Kontakt
             </Link>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-md hover:shadow-lg">
-              Rezerviši Uslugu
+              Rezerviši uslugu
             </button>
           </nav>
 

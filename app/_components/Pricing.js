@@ -64,7 +64,7 @@ export default function Pricing() {
                     : "border-2 border-blue-600 text-blue-600 hover:bg-blue-50"
                 }`}
               >
-                Izaberite Plan
+                Izaberite plan
               </button>
             </div>
           ))}

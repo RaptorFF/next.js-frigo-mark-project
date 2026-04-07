@@ -77,12 +77,12 @@ export default function ServiceBooking() {
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
               >
                 <option value="">Izaberite uslugu</option>
-                <option value="installation">Instalacija Klima Uređaja</option>
-                <option value="repair">Popravka Grejanja</option>
-                <option value="maintenance">Održavanje HVAC Sistema</option>
-                <option value="cleaning">Čišćenje Kanala</option>
-                <option value="thermostat">Instalacija Termostata</option>
-                <option value="emergency">Hitna Usluga</option>
+                <option value="installation">Instalacija klima uređaja</option>
+                <option value="repair">Popravka grejanja</option>
+                <option value="maintenance">Održavanje HVAC sistema</option>
+                <option value="cleaning">Čišćenje kanala</option>
+                <option value="thermostat">Instalacija termostata</option>
+                <option value="emergency">Hitna usluga</option>
               </select>
             </div>
             <div>

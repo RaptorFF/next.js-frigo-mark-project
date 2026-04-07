@@ -13,21 +13,19 @@ export default function Hero() {
 
       <div className="relative z-10 flex flex-col items-start justify-center h-full text-left w-full max-w-3xl pl-4 md:pl-12 pr-4 translate-y-16 md:translate-y-24">
         <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6 fade-in-up [animation-delay:100ms] [animation-fill-mode:both]">
-          Budi Cool sa <span className="block">FrigoMark</span> HVAC Uslugama
+          Budi cool sa <span className="block">FrigoMark</span> HVAC uslugama
         </h1>
         <p className="text-lg text-blue-100 leading-relaxed mb-8 max-w-2xl fade-in-up [animation-delay:350ms] [animation-fill-mode:both]">
           Profesionalne HVAC usluge za grejanje, hlađenje i kvalitet vazduha.
         </p>
         <div className="flex flex-col sm:flex-row gap-5 fade-in-up [animation-delay:550ms] [animation-fill-mode:both]">
           <button className="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold hover:bg-blue-50 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
-            Rezerviši Uslugu
+            Rezerviši uslugu
           </button>
           <button className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition">
-            Saznaj Više
+            Saznaj više
           </button>
         </div>
-
-        
       </div>
     </section>
   );
