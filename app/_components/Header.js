@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,12 +40,51 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1 text-lg font-medium">
-            <Link
-              href="/#services"
-              className="hover:text-blue-100 transition px-4 py-2"
+            {/* Usluge with Dropdown */}
+            <div
+              className="relative group"
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
             >
-              Usluge
-            </Link>
+              <button className="hover:text-blue-100 transition px-4 py-2 flex items-center gap-2">
+                Usluge
+                <sub className="text-xs">▼</sub>
+              </button>
+
+              {/* Dropdown Menu */}
+              {servicesDropdownOpen && (
+                <div className="absolute left-0 mt-0 w-56 bg-white text-blue-900 rounded-lg shadow-2xl py-2 z-50 animate-in fade-in duration-200">
+                  <Link
+                    href="/#services"
+                    className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
+                    onClick={() => setServicesDropdownOpen(false)}
+                  >
+                    Instalacija klima uređaja
+                  </Link>
+                  <Link
+                    href="/#services"
+                    className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
+                    onClick={() => setServicesDropdownOpen(false)}
+                  >
+                    Održavanje i servis
+                  </Link>
+                  <Link
+                    href="/#services"
+                    className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
+                    onClick={() => setServicesDropdownOpen(false)}
+                  >
+                    Čišćenje klima uređaja
+                  </Link>
+                  <Link
+                    href="/#services"
+                    className="block px-6 py-3 hover:bg-blue-50 transition"
+                    onClick={() => setServicesDropdownOpen(false)}
+                  >
+                    Hitne popravke
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link
               href="/#pricing"
               className="hover:text-blue-100 transition px-4 py-2"
@@ -64,7 +104,7 @@ export default function Header() {
               Kontakt
             </Link>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-md hover:shadow-lg">
-              Rezerviši uslugu
+              Zakažite termin
             </button>
           </nav>
 
@@ -120,7 +160,7 @@ export default function Header() {
               Kontakt
             </Link>
             <button className="w-full bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition">
-              Rezerviši Uslugu
+              Zakažite termin
             </button>
           </nav>
         )}
