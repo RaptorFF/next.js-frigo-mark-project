@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import { services } from "@/app/_data/services";
@@ -9,9 +12,35 @@ const serviceBackgrounds = [
 ];
 
 export default function Services() {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+
+        setIsVisible(true);
+        observer.disconnect();
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="services"
+      ref={sectionRef}
       className="section-container scroll-mt-24 bg-blue-50 flex flex-col items-center"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
@@ -28,7 +57,12 @@ export default function Services() {
           {services.map((service, idx) => (
             <div
               key={service.id}
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2 border border-gray-100 min-h-130 flex flex-col"
+              className={`bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 min-h-130 flex flex-col transform transition-all duration-1000 ease-out hover:-translate-y-2 hover:shadow-xl ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
+              }`}
+              style={{ transitionDelay: `${idx * 280}ms` }}
             >
               <div className="relative basis-[40%] min-h-50">
                 <Image

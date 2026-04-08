@@ -20,7 +20,9 @@ export default function Header() {
       className={`fixed w-full text-white z-50 transition-all duration-500
         ${
           isTop
-            ? "bg-transparent header-transparent border-b border-transparent"
+            ? mobileMenuOpen
+              ? "bg-linear-to-r from-blue-600 to-blue-800 header-solid border-b border-blue-700"
+              : "bg-transparent header-transparent border-b border-transparent"
             : "bg-linear-to-r from-blue-600 to-blue-800 header-solid border-b border-blue-700 fade-in-up header-blur-shadow"
         }`}
     >
@@ -36,7 +38,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4 text-lg font-medium">
+          <nav className="hidden md:flex items-center space-x-1 text-lg font-medium">
             <Link
               href="/#services"
               className="hover:text-blue-100 transition px-4 py-2"
@@ -89,7 +91,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 text-lg font-medium">
+          <nav className="md:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 text-lg font-medium bg-linear-to-r from-blue-600 to-blue-800">
             <Link
               href="/#services"
               className="block px-4 py-2 hover:text-blue-100 transition"

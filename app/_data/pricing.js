@@ -2,7 +2,7 @@ export const pricingPlans = [
   {
     id: 1,
     name: "Osnovni plan",
-    price: "$79",
+    price: "€79",
     frequency: "/mesečno",
     description: "Savršen za stambene korisnike",
     features: [
@@ -18,7 +18,7 @@ export const pricingPlans = [
   {
     id: 2,
     name: "Profesionalni plan",
-    price: "$129",
+    price: "€129",
     frequency: "/mesečno",
     description: "Najpopularniji za stambene korisnike",
     features: [
@@ -36,7 +36,7 @@ export const pricingPlans = [
   {
     id: 3,
     name: "Premium plan",
-    price: "$199",
+    price: "€199",
     frequency: "/mesečno",
     description: "Za komercijalne objekte i zahtevne korisnike",
     features: [

@@ -1,9 +1,38 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { pricingPlans } from "@/app/_data/pricing";
 
 export default function Pricing() {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+
+        setIsVisible(true);
+        observer.disconnect();
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="pricing"
+      ref={sectionRef}
       className="section-container bg-blue-50 flex flex-col items-center"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
@@ -17,14 +46,19 @@ export default function Pricing() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-10">
-          {pricingPlans.map((plan) => (
+          {pricingPlans.map((plan, idx) => (
             <div
               key={plan.id}
-              className={`rounded-xl shadow-lg p-10 transition transform hover:scale-105 border ${
+              className={`rounded-xl shadow-lg p-10 transform transition-all duration-1000 ease-out hover:scale-105 border ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
+              } ${
                 plan.popular
                   ? "border-2 border-blue-600 relative bg-white"
                   : "border-gray-200 bg-white"
               }`}
+              style={{ transitionDelay: `${idx * 280}ms` }}
             >
               {plan.popular && (
                 <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-md">
