@@ -95,7 +95,7 @@ export default function Header() {
               href="/#testimonials"
               className="hover:text-blue-100 transition px-4 py-2"
             >
-              Mišljenja klijenata
+              O nama
             </Link>
             <Link
               href="/contact"
