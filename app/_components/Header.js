@@ -35,7 +35,7 @@ export default function Header() {
             className="flex items-center space-x-3 text-2xl font-bold hover:text-blue-100 transition tracking-tight"
           >
             <span className="text-3xl p-1">❄️</span>
-            <span>FrigoMark</span>
+            <span>Frigomark</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -151,7 +151,7 @@ export default function Header() {
               className="block px-4 py-2 hover:text-blue-100 transition"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Mišljenja Klijenata
+              O nama
             </Link>
             <Link
               href="/contact"

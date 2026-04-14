@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-6 flex items-center space-x-2 leading-tight">
               <span className="text-2xl">❄️</span>
-              <span>FrigoMark</span>
+              <span>Frigomark</span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
               Vaš pouzdani HVAC servis provajder već više od 20 godina.
@@ -137,7 +137,7 @@ export default function Footer() {
               </Link>
             </div>
             <p>
-              &copy; {currentYear} FrigoMark HVAC Usluge. Sva prava zadržana.
+              &copy; {currentYear} Frigomark HVAC Usluge. Sva prava zadržana.
             </p>
           </div>
         </div>

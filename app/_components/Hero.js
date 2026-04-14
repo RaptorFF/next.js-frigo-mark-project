@@ -13,7 +13,7 @@ export default function Hero() {
 
       <div className="relative z-10 flex flex-col items-start justify-center h-full text-left w-full max-w-3xl pl-4 md:pl-12 pr-4 translate-y-16 md:translate-y-24">
         <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6 fade-in-up [animation-delay:100ms] [animation-fill-mode:both]">
-          Budi cool sa <span className="block">FrigoMark</span> HVAC uslugama
+          Budi cool sa <span className="block">Frigomark</span> HVAC uslugama
         </h1>
         <p className="text-lg text-blue-100 leading-relaxed mb-8 max-w-2xl fade-in-up [animation-delay:350ms] [animation-fill-mode:both]">
           Profesionalne HVAC usluge za grejanje, hlađenje i kvalitet vazduha.
