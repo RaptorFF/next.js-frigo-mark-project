@@ -41,7 +41,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1 text-lg font-medium">
             <Link
-              href="/#testimonials"
+              href="/about"
               className="hover:text-blue-100 transition px-4 py-2"
             >
               O nama
