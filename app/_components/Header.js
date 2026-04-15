@@ -40,6 +40,12 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1 text-lg font-medium">
+            <Link
+              href="/#testimonials"
+              className="hover:text-blue-100 transition px-4 py-2"
+            >
+              O nama
+            </Link>
             {/* Usluge with Dropdown */}
             <div
               className="relative group"
@@ -91,12 +97,7 @@ export default function Header() {
             >
               Cenovnik
             </Link>
-            <Link
-              href="/#testimonials"
-              className="hover:text-blue-100 transition px-4 py-2"
-            >
-              O nama
-            </Link>
+
             <Link
               href="/contact"
               className="hover:text-blue-100 transition px-4 py-2"
@@ -133,6 +134,13 @@ export default function Header() {
         {mobileMenuOpen && (
           <nav className="md:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 text-lg font-medium bg-linear-to-r from-blue-600 to-blue-800">
             <Link
+              href="/#testimonials"
+              className="block px-4 py-2 hover:text-blue-100 transition"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              O nama
+            </Link>
+            <Link
               href="/#services"
               className="block px-4 py-2 hover:text-blue-100 transition"
               onClick={() => setMobileMenuOpen(false)}
@@ -146,13 +154,7 @@ export default function Header() {
             >
               Cenovnik
             </Link>
-            <Link
-              href="/#testimonials"
-              className="block px-4 py-2 hover:text-blue-100 transition"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              O nama
-            </Link>
+
             <Link
               href="/contact"
               className="block px-4 py-2 hover:text-blue-100 transition"
