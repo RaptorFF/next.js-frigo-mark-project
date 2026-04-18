@@ -50,15 +50,6 @@ select option[value=""] {
   --font-mono: var(--font-geist-mono);
 } */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --text-light: #9ca3af;
-    --border-light: #374151;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
