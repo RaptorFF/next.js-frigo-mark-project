@@ -2,11 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +23,9 @@ export default function Header() {
     <header
       className={`fixed w-full text-white z-50 transition-all duration-500
         ${
-          isTop
-            ? mobileMenuOpen
-              ? "bg-linear-to-r from-blue-600 to-blue-800 header-solid border-b border-blue-700"
-              : "bg-transparent header-transparent border-b border-transparent"
-            : "bg-linear-to-r from-blue-600 to-blue-800 header-solid border-b border-blue-700 fade-in-up header-blur-shadow"
+          !isHomePage || !isTop || mobileMenuOpen
+            ? "bg-linear-to-r from-blue-600 to-blue-800 header-solid border-b border-blue-700"
+            : "bg-transparent header-transparent border-b border-transparent"
         }`}
     >
       <div className="mx-auto">
