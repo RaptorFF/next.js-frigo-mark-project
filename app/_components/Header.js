@@ -135,7 +135,7 @@ export default function Header() {
         {mobileMenuOpen && (
           <nav className="md:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 text-lg font-medium bg-linear-to-r from-blue-600 to-blue-800">
             <Link
-              href="/#testimonials"
+              href="/about"
               className="block px-4 py-2 hover:text-blue-100 transition"
               onClick={() => setMobileMenuOpen(false)}
             >
