@@ -32,21 +32,18 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="section-container bg-white flex flex-col items-center"
+      className="bg-white flex flex-col items-center pt-(--header-height) pb-16"
     >
       <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            Get In Touch
+          <h2 className="pt-10 text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+            Kontaktirajte nas
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed py-4">
-            Have questions? We&apos;d love to hear from you
-          </p>
         </div>
 
         {submitted && (
           <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-            Thank you! We&apos;ll contact you soon.
+            Hvala! Uskoro ćemo vas kontaktirati.
           </div>
         )}
 
@@ -54,7 +51,7 @@ export default function ContactForm() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Full Name
+                Ime i prezime
               </label>
               <input
                 type="text"
@@ -63,7 +60,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
-                placeholder="John Doe"
+                placeholder="Petar Petrović"
               />
             </div>
             <div>
@@ -77,14 +74,14 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
-                placeholder="john@example.com"
+                placeholder="petar@example.com"
               />
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Phone Number
+                Broj telefona
               </label>
               <input
                 type="tel"
@@ -98,7 +95,7 @@ export default function ContactForm() {
             </div>
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Subject
+                Tema
               </label>
               <select
                 name="subject"
@@ -107,18 +104,18 @@ export default function ContactForm() {
                 required
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
               >
-                <option value="">Select a service</option>
-                <option value="repair">Repair Request</option>
-                <option value="installation">Installation Service</option>
-                <option value="maintenance">Maintenance Plan</option>
-                <option value="emergency">Emergency Service</option>
-                <option value="inquiry">General Inquiry</option>
+                <option value="">Izaberite uslugu</option>
+                <option value="repair">Zahtev za popravku</option>
+                <option value="installation">Usluga instalacije</option>
+                <option value="maintenance">Plan održavanja</option>
+                <option value="emergency">Hitna usluga</option>
+                <option value="inquiry">Opšti upit</option>
               </select>
             </div>
           </div>
           <div>
             <label className="block text-gray-700 font-semibold mb-3">
-              Message
+              Poruka
             </label>
             <textarea
               name="message"
@@ -127,14 +124,14 @@ export default function ContactForm() {
               required
               rows="6"
               className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition resize-none"
-              placeholder="Tell us about your HVAC needs..."
+              placeholder="Recite nam nešto o vašim potrebama za HVAC..."
             ></textarea>
           </div>
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition text-lg shadow-md hover:shadow-lg"
           >
-            Send Message
+            Pošaljite poruku
           </button>
         </form>
       </div>

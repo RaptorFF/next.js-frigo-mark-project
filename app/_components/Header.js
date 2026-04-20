@@ -84,7 +84,7 @@ export default function Header() {
                   </Link>
                   <Link
                     href="/#services"
-                    className="block px-6 py-3 hover:bg-blue-50 transition"
+                    className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
                     Hitne popravke

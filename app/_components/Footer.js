@@ -17,7 +17,7 @@ export default function Footer() {
             <p className="text-gray-400 leading-relaxed">
               Vaš pouzdani HVAC servis provajder već više od 20 godina.
             </p>
-            <p className="text-gray-400 mt-4 text-sm">📞 1-800-FRIGOMARK</p>
+            <p className="text-gray-400 mt-4 text-sm">📞 +381 64 2869648</p>
             <p className="text-gray-400 text-sm">✉️ info@frigomark.com</p>
           </div>
 
@@ -59,83 +59,50 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-white transition">
-                  Karijere
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition">
                   Kontakt
                 </a>
+              </li>
+              <li>
+                <div className="flex text-2xl pt-1" style={{ gap: "1rem" }}>
+                  <Link
+                    href="#"
+                    className="hover:text-white transition"
+                    aria-label="Facebook"
+                  >
+                    <FaFacebook />
+                  </Link>
+                  <Link
+                    href="#"
+                    className="hover:text-white transition"
+                    aria-label="Twitter"
+                  >
+                    <FaTwitter />
+                  </Link>
+                  <Link
+                    href="#"
+                    className="hover:text-white transition"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin />
+                  </Link>
+                  <Link
+                    href="#"
+                    className="hover:text-white transition"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram />
+                  </Link>
+                </div>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h4 className="text-lg font-bold mb-6 leading-tight">Pravno</h4>
-            <ul className="space-y-3 text-gray-400 text-sm">
-              <li>
-                <a href="#" className="hover:text-white transition">
-                  Politika privatnosti
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition">
-                  Uslovi korišćenja
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition">
-                  Garancija
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
+          
         </div>
 
         {/* Divider */}
         <div className="border-t border-gray-700 pt-12 mt-12">
-          <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm space-y-4 md:space-y-0">
-            <div className="flex mt-4 md:mt-0 text-2xl" style={{ gap: "1rem" }}>
-              <Link
-                href="#"
-                className="hover:text-white transition"
-                aria-label="Facebook"
-              >
-                <FaFacebook />
-              </Link>
-              <Link
-                href="#"
-                className="hover:text-white transition"
-                aria-label="Twitter"
-              >
-                <FaTwitter />
-              </Link>
-              <Link
-                href="#"
-                className="hover:text-white transition"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin />
-              </Link>
-              <Link
-                href="#"
-                className="hover:text-white transition"
-                aria-label="Instagram"
-              >
-                <FaInstagram />
-              </Link>
-            </div>
+          <div className="flex flex-col md:flex-row justify-center items-center text-gray-400 text-sm space-y-4 md:space-y-0">
             <p>
               &copy; {currentYear} Frigomark HVAC Usluge. Sva prava zadržana.
             </p>
