@@ -38,10 +38,10 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            Šta naši kupci kažu
+            Šta naši korisnici kažu
           </h2>
           <p className="text-lg text-gray-600 mx-auto leading-relaxed py-4">
-            Pravi komentari zadovoljnih kupaca koji su isprobali naše proizvode.
+            Pravi komentari zadovoljnih korisnika koji su isprobali naše usluge.
             Njihova iskustva i preporuke su naša najveća nagrada.
           </p>
         </div>
