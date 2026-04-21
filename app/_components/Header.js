@@ -44,6 +44,7 @@ export default function Header() {
             <Link
               href="/about"
               className="hover:text-blue-100 transition px-4 py-2"
+              onClick={() => window.scrollTo(0, 0)}
             >
               O nama
             </Link>
@@ -102,6 +103,7 @@ export default function Header() {
             <Link
               href="/contact"
               className="hover:text-blue-100 transition px-4 py-2"
+              onClick={() => window.scrollTo(0, 0)}
             >
               Kontakt
             </Link>
@@ -137,7 +139,10 @@ export default function Header() {
             <Link
               href="/about"
               className="block px-4 py-2 hover:text-blue-100 transition"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.scrollTo(0, 0);
+              }}
             >
               O nama
             </Link>
@@ -159,6 +164,10 @@ export default function Header() {
             <Link
               href="/contact"
               className="block px-4 py-2 hover:text-blue-100 transition"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.scrollTo(0, 0);
+              }}
             >
               Kontakt
             </Link>

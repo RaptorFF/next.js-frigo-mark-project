@@ -33,23 +33,24 @@ export default function AboutPage() {
 
         <div className="overflow-hidden">
           <Image
-            src="/ac-service.jpg"
-            alt="Servis klima uredjaja"
+            src="/heating-service1.jpeg"
+            alt="Servis sistema grejanja"
             width={1200}
             height={720}
             className="float-left mr-8 mb-4 w-full md:w-1/2 h-72 md:h-88 object-cover rounded-2xl shadow-lg"
           />
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Pored klimatizacije i rashladnih uređaja, specijalizovani smo i za
-            servisiranje sistema toplotnih pumpi, veš mašina i električnih
-            šporeta. Naš tim poseduje znanje i iskustvo za brzo i efikasno
-            rešavanje svih vrsta kvarova i održavanje ovih uređaja, uz
-            korišćenje kvalitetnih delova i savremenih dijagnostičkih alata.
+            servisiranje sistema toplotnih pumpi, kao i servisiranje električnih
+            uređaja poput veš mašina i električnih šporeta. Naš tim poseduje
+            znanje i iskustvo za brzo i efikasno rešavanje svih vrsta kvarova i
+            održavanje ovih uređaja, uz korišćenje kvalitetnih delova i
+            savremenih dijagnostičkih alata.
           </p>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Poverite nam brigu o vašoj klimatizaciji, rashladnim uređajima,
-            toplotnim pumpama, veš mašinama i električnim šporetima - sigurnost,
-            pouzdanost i zadovoljstvo klijenata su naš prioritet.
+            električnim uređajima i toplotnim pumpama - sigurnost, pouzdanost i
+            zadovoljstvo klijenata su naš prioritet.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
             Za sva pitanja, savete ili zakazivanje servisa, slobodno nas

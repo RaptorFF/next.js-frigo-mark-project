@@ -1,5 +1,9 @@
 function Spinner() {
-  return <div className='spinner'></div>;
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="spinner"></div>
+    </div>
+  );
 }
 
 export default Spinner;
