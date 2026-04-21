@@ -14,13 +14,17 @@ export default function AboutPage() {
               alt="Ugradnja klima uredjaja"
               width={1200}
               height={720}
-              className="float-right ml-0 md:ml-8 mb-6 md:mb-4 w-full md:w-1/2 h-72 md:h-88 object-cover rounded-2xl shadow-lg"
+              className="float-right ml-0 md:ml-8 mb-6 md:mb-4 w-full md:w-1/2 h-80 md:h-104 object-cover rounded-2xl shadow-lg"
             />
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Naša firma specijalizovana je za profesionalnu ugradnju,
               servisiranje i održavanje klima uređaja, kao i drugih rashladnih
               sistema. Sa dugogodišnjim iskustvom i timom stručnjaka, pružamo
               pouzdane i kvalitetne usluge za domaćinstva i poslovne objekte.
+              Svaki posao obavljamo savesno, poštujući dogovorene rokove i
+              brinući se o čistoći i redu na radnom mestu. Naši tehničari
+              redovno se usavršavaju kako bi pratili najnovije tehnologije i
+              standarde u industriji.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Naš cilj je da obezbedimo maksimalnu udobnost, energetsku
@@ -37,7 +41,7 @@ export default function AboutPage() {
             alt="Servis sistema grejanja"
             width={1200}
             height={720}
-            className="float-left mr-0 md:mr-8 mb-6 md:mb-4 w-full md:w-1/2 h-72 md:h-88 object-cover rounded-2xl shadow-lg"
+            className="float-left mr-0 md:mr-8 mb-6 md:mb-4 w-full md:w-1/2 h-80 md:h-104 object-cover rounded-2xl shadow-lg"
           />
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Pored klimatizacije i rashladnih uređaja, specijalizovani smo i za
