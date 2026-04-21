@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-16 border-t border-gray-800">
       <div className="mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-6 flex items-center space-x-2 leading-tight">
@@ -53,14 +53,14 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6 leading-tight">Kompanija</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li>
-                <a href="#" className="hover:text-white transition">
+                <Link href="/about" className="hover:text-white transition">
                   O nama
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <Link href="/contact" className="hover:text-white transition">
                   Kontakt
-                </a>
+                </Link>
               </li>
               <li>
                 <div className="flex text-2xl pt-1" style={{ gap: "1rem" }}>
@@ -96,8 +96,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          
         </div>
 
         {/* Divider */}
