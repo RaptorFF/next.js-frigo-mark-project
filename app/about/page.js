@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <section className="max-w-7xl mx-auto pt-32 pb-20 px-6 lg:px-8">
+    <section className="mx-auto pt-32 pb-20 px-6 lg:px-8 bg-blue-50">
       <div className="space-y-12">
         <div>
           <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-8 tracking-tight text-left">
@@ -14,7 +14,7 @@ export default function AboutPage() {
               alt="Ugradnja klima uredjaja"
               width={1200}
               height={720}
-              className="float-right ml-8 mb-4 w-full md:w-1/2 h-72 md:h-88 object-cover rounded-2xl shadow-lg"
+              className="float-right ml-0 md:ml-8 mb-6 md:mb-4 w-full md:w-1/2 h-72 md:h-88 object-cover rounded-2xl shadow-lg"
             />
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Naša firma specijalizovana je za profesionalnu ugradnju,
@@ -37,7 +37,7 @@ export default function AboutPage() {
             alt="Servis sistema grejanja"
             width={1200}
             height={720}
-            className="float-left mr-8 mb-4 w-full md:w-1/2 h-72 md:h-88 object-cover rounded-2xl shadow-lg"
+            className="float-left mr-0 md:mr-8 mb-6 md:mb-4 w-full md:w-1/2 h-72 md:h-88 object-cover rounded-2xl shadow-lg"
           />
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Pored klimatizacije i rashladnih uređaja, specijalizovani smo i za

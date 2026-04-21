@@ -114,9 +114,13 @@ export default function Header() {
             >
               Kontakt
             </Link>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-md hover:shadow-lg">
+            <Link
+              href="/serviceBooking"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-md hover:shadow-lg"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               Zakažite termin
-            </button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -178,9 +182,16 @@ export default function Header() {
             >
               Kontakt
             </Link>
-            <button className="w-full bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition">
+            <Link
+              href="/serviceBooking"
+              className="w-full bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.scrollTo(0, 0);
+              }}
+            >
               Zakažite termin
-            </button>
+            </Link>
           </nav>
         )}
       </div>
