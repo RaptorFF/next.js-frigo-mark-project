@@ -77,9 +77,9 @@ h6 {
   font-weight: 700;
 }
 
-p {
+/* p {
   color: var(--text-light);
-}
+} */
 
 /* Custom animations */
 @keyframes fadeInUp {

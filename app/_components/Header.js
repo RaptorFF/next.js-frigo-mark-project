@@ -101,8 +101,9 @@ export default function Header() {
               )}
             </div>
             <Link
-              href="/#pricing"
+              href="/pricing"
               className="hover:text-blue-100 transition px-4 py-2"
+              onClick={() => window.scrollTo(0, 0)}
             >
               Cenovnik
             </Link>
@@ -165,9 +166,12 @@ export default function Header() {
               Usluge
             </Link>
             <Link
-              href="/#pricing"
+              href="/pricing"
               className="block px-4 py-2 hover:text-blue-100 transition"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.scrollTo(0, 0);
+              }}
             >
               Cenovnik
             </Link>
