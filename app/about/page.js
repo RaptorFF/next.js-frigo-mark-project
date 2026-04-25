@@ -1,4 +1,6 @@
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -57,8 +59,9 @@ export default function AboutPage() {
             zadovoljstvo klijenata su naš prioritet.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Za sva pitanja, savete ili zakazivanje servisa, slobodno nas
-            kontaktirajte. Hvala što ste izabrali našu firmu!
+            Za sva pitanja, savete ili zakazivanje servisa, slobodno nas{' '}
+            <Link href="/contact" className="text-black hover:text-blue-900 font-semibold">kontaktirajte</Link>.
+            Hvala što ste izabrali našu firmu!
           </p>
         </div>
       </div>
