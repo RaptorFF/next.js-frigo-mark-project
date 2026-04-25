@@ -3,29 +3,6 @@ import Link from "next/link";
 const categories = [
   {
     id: 1,
-    title: "Servis klima uređaja",
-    subtitle:
-      "Redovan godišnji servis — čišćenje, dezinfekcija, provera sistema",
-    rows: [
-      {
-        name: "Servis klime 9 i 12 BTU",
-        note: "redovan godišnji servis",
-        price: "od 1.500 RSD",
-      },
-      {
-        name: "Servis klime 18 BTU",
-        note: "redovan godišnji servis",
-        price: "od 3.000 RSD",
-      },
-      {
-        name: "Servis klime 24 BTU",
-        note: "redovan godišnji servis",
-        price: "od 3.500 RSD",
-      },
-    ],
-  },
-  {
-    id: 2,
     title: "Montaža klima uređaja",
     subtitle:
       "Cena uključuje standardnu instalaciju; doplata za svaki dodatni dužni metar cevi",
@@ -44,6 +21,29 @@ const categories = [
         name: "Montaža klime 24 BTU",
         note: "doplata po dužnom metru cevi 2.800 RSD",
         price: "12.000 RSD",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Servis klima uređaja",
+    subtitle:
+      "Redovan godišnji servis — čišćenje, dezinfekcija, provera sistema",
+    rows: [
+      {
+        name: "Servis klime 9 i 12 BTU",
+        note: "redovan godišnji servis",
+        price: "od 1.500 RSD",
+      },
+      {
+        name: "Servis klime 18 BTU",
+        note: "redovan godišnji servis",
+        price: "od 3.000 RSD",
+      },
+      {
+        name: "Servis klime 24 BTU",
+        note: "redovan godišnji servis",
+        price: "od 3.500 RSD",
       },
     ],
   },
