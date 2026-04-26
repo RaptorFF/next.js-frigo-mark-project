@@ -7,8 +7,8 @@ import { services } from "@/app/_data/services";
 
 const serviceBackgrounds = [
   "/ac-installation.jpeg",
-  "/ac-washing.png",
   "/heating-service1.jpeg",
+  "/ac-washing.png",
 ];
 
 export default function Services() {
@@ -64,7 +64,7 @@ export default function Services() {
               }`}
               style={{ transitionDelay: `${idx * 280}ms` }}
             >
-              <div className="relative basis-[40%] min-h-50">
+              <div className="relative w-full" style={{ height: "220px" }}>
                 <Image
                   src={serviceBackgrounds[idx % serviceBackgrounds.length]}
                   alt=""

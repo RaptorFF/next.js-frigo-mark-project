@@ -13,18 +13,6 @@ export const services = [
   },
   {
     id: 2,
-    title: "Održavanje HVAC sistema",
-    description:
-      "Redovno održavanje kako bi vaši sistemi radili glatko tokom cele godine",
-    icon: "🔧",
-    features: [
-      "Sezonski pregledi",
-      "Zamena filtera",
-      "Optimizacija performansi",
-    ],
-  },
-  {
-    id: 3,
     title: "Servisiranje električnih uređaja",
     description:
       "Profesionalno servisiranje i popravka električnih uređaja kako bi radili pouzdano",
@@ -33,6 +21,18 @@ export const services = [
       "Dijagnostika problema",
       "Brza popravka",
       "Kvalitetni rezervni delovi",
+    ],
+  },
+  {
+    id: 3,
+    title: "Održavanje HVAC sistema",
+    description:
+      "Redovno održavanje kako bi vaši sistemi radili glatko tokom cele godine",
+    icon: "🔧",
+    features: [
+      "Sezonski pregledi",
+      "Zamena filtera",
+      "Optimizacija performansi",
     ],
   },
 ];
