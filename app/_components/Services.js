@@ -7,8 +7,8 @@ import { services } from "@/app/_data/services";
 
 const serviceBackgrounds = [
   "/ac-installation.jpeg",
-  "/heating-service1.jpeg",
   "/ac-washing.png",
+  "/heating-service1.jpeg",
 ];
 
 export default function Services() {

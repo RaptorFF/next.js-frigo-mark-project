@@ -13,17 +13,6 @@ export const services = [
   },
   {
     id: 2,
-    title: "Popravka grejanja",
-    description: "Hitne popravke za peći, toplotne pumpe i grejne sisteme",
-    icon: "🔥",
-    features: [
-      "Hitne intervencije",
-      "Odgovor istog dana",
-      "Uključena garancija delova",
-    ],
-  },
-  {
-    id: 3,
     title: "Održavanje HVAC sistema",
     description:
       "Redovno održavanje kako bi vaši sistemi radili glatko tokom cele godine",
@@ -32,6 +21,18 @@ export const services = [
       "Sezonski pregledi",
       "Zamena filtera",
       "Optimizacija performansi",
+    ],
+  },
+  {
+    id: 3,
+    title: "Servisiranje električnih uređaja",
+    description:
+      "Profesionalno servisiranje i popravka električnih uređaja kako bi radili pouzdano",
+    icon: "🔌",
+    features: [
+      "Dijagnostika problema",
+      "Brza popravka",
+      "Kvalitetni rezervni delovi",
     ],
   },
 ];
