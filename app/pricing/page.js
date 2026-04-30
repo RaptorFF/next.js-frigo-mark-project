@@ -130,6 +130,45 @@ const categories = [
       },
     ],
   },
+  // Nova kategorija: Popravke električnih uređaja
+  {
+    id: 6,
+    title: "Popravke električnih uređaja",
+    subtitle:
+      "Servis i popravka veš mašina, električnih šporeta i drugih kućnih aparata",
+    rows: [
+      {
+        name: "Dijagnostika kvara (veš mašina/šporet)",
+        note: "izlazak na teren i utvrđivanje kvara",
+        price: "2.000 RSD",
+      },
+      {
+        name: "Zamena grejača na veš mašini",
+        note: "cena bez dela, uključuje rad",
+        price: "od 3.500 RSD",
+      },
+      {
+        name: "Zamena pumpe za vodu (veš mašina)",
+        note: "cena bez dela, uključuje rad",
+        price: "od 3.500 RSD",
+      },
+      {
+        name: "Popravka električnog šporeta",
+        note: "zamena ringle, termostata, prekidača i sl.",
+        price: "od 2.500 RSD",
+      },
+      {
+        name: "Zamena programatora (veš mašina)",
+        note: "cena bez dela, uključuje rad",
+        price: "po dogovoru",
+      },
+      {
+        name: "Ostale popravke električnih uređaja",
+        note: "cena zavisi od vrste kvara",
+        price: "po dogovoru",
+      },
+    ],
+  },
 ];
 
 export default function PricingPage() {
