@@ -26,6 +26,33 @@ const categories = [
   },
   {
     id: 2,
+    title: "Montaža inverter klime",
+    subtitle: "Cenovnik za standardnu i dodatnu montažu inverter klima uređaja",
+    rows: [
+      {
+        name: "Standardna montaža do 3,5 kW",
+        note: "uključuje do 3m cevi, jedan zidni prolaz, vakumiranje i puštanje u rad",
+        price: "12.000 RSD",
+      },
+      {
+        name: "Standardna montaža 3,5–5 kW",
+        note: "uključuje do 3m cevi, jedan zidni prolaz, vakumiranje i puštanje u rad",
+        price: "14.000 RSD",
+      },
+      {
+        name: "Standardna montaža 5–7 kW",
+        note: "uključuje do 3m cevi, jedan zidni prolaz, vakumiranje i puštanje u rad",
+        price: "16.000 RSD",
+      },
+      {
+        name: "Dodatni metar bakarne cevi",
+        note: "za svaki metar preko standarda",
+        price: "2.000 RSD",
+      },
+    ],
+  },
+  {
+    id: 3,
     title: "Servis klima uređaja",
     subtitle:
       "Redovan godišnji servis — čišćenje, dezinfekcija, provera sistema",
@@ -48,7 +75,7 @@ const categories = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Demontaža i premeštanje",
     subtitle:
       "Profesionalno skidanje i premeštanje unutrašnje ili spoljne jedinice",
@@ -72,7 +99,7 @@ const categories = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Popravke i zamena delova",
     subtitle:
       "Cene popravki zavise od dijagnoze; konačna cena se dogovara na licu mesta",
@@ -98,7 +125,7 @@ const categories = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Ostale usluge",
     subtitle: "Građevinski radovi i materijal koji prate montažu ili servis",
     rows: [
@@ -132,7 +159,7 @@ const categories = [
   },
   // Nova kategorija: Popravke električnih uređaja
   {
-    id: 6,
+    id: 7,
     title: "Popravke električnih uređaja",
     subtitle:
       "Servis i popravka veš mašina, električnih šporeta i drugih kućnih aparata",
