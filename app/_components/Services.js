@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { services } from "@/app/_data/services";
 
@@ -97,9 +98,19 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full mt-auto bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold hover:shadow-md">
+                <Link
+                  href={
+                    idx === 0
+                      ? "/installation"
+                      : idx === 1
+                        ? "/servicing"
+                        : "/maintenance"
+                  }
+                  className="w-full mt-auto bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold hover:shadow-md flex items-center justify-center"
+                  scroll={false}
+                >
                   Saznajte više
-                </button>
+                </Link>
               </div>
             </div>
           ))}
