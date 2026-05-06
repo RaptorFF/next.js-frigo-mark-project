@@ -63,35 +63,35 @@ export default function Header() {
               {servicesDropdownOpen && (
                 <div className="absolute left-0 mt-0 w-56 bg-white text-blue-900 rounded-lg shadow-2xl py-2 z-50 animate-in fade-in duration-200">
                   <Link
-                    href="/#services"
+                    href="/installation"
                     className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
                     Instalacija klima uređaja
                   </Link>
                   <Link
-                    href="/#services"
+                    href="/servicing"
                     className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
                     Održavanje i servis
                   </Link>
                   <Link
-                    href="/#services"
+                    href="/maintenance"
                     className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
                     Popravka rashladnih uređaja(frižideri, zamrzivači)
                   </Link>
                   <Link
-                    href="/#services"
+                    href="/maintenance"
                     className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
                     Popravka električnih uređaja(veš mašine, šporeti)
                   </Link>
                   <Link
-                    href="/#services"
+                    href="/heatingPump"
                     className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
