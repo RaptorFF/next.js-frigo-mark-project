@@ -70,21 +70,21 @@ export default function Header() {
                     Instalacija klima uređaja
                   </Link>
                   <Link
-                    href="/servicing"
+                    href="/maintenance"
                     className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
                     Održavanje i servis
                   </Link>
                   <Link
-                    href="/maintenance"
+                    href="/servicing"
                     className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
                     Popravka rashladnih uređaja(frižideri, zamrzivači)
                   </Link>
                   <Link
-                    href="/maintenance"
+                    href="/servicing"
                     className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
