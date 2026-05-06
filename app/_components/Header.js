@@ -8,6 +8,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
@@ -158,13 +159,75 @@ export default function Header() {
             >
               O nama
             </Link>
-            <Link
-              href="/#services"
-              className="block px-4 py-2 hover:text-blue-100 transition"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Usluge
-            </Link>
+            {/* Usluge with dropdown */}
+            <div>
+              <button
+                className="flex items-center gap-2 w-full px-4 py-2 hover:text-blue-100 transition"
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              >
+                Usluge
+                <sub className="text-xs">{mobileServicesOpen ? "▲" : "▼"}</sub>
+              </button>
+              {mobileServicesOpen && (
+                <div className="pl-6 mt-1 space-y-1 border-l border-blue-400 ml-4">
+                  <Link
+                    href="/installation"
+                    className="block px-4 py-2 hover:text-blue-100 transition text-base"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileServicesOpen(false);
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    Instalacija klima uređaja
+                  </Link>
+                  <Link
+                    href="/maintenance"
+                    className="block px-4 py-2 hover:text-blue-100 transition text-base"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileServicesOpen(false);
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    Održavanje i servis
+                  </Link>
+                  <Link
+                    href="/servicing"
+                    className="block px-4 py-2 hover:text-blue-100 transition text-base"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileServicesOpen(false);
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    Popravka rashladnih uređaja (frižideri, zamrzivači)
+                  </Link>
+                  <Link
+                    href="/servicing"
+                    className="block px-4 py-2 hover:text-blue-100 transition text-base"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileServicesOpen(false);
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    Popravka električnih uređaja (veš mašine, šporeti)
+                  </Link>
+                  <Link
+                    href="/heatingPump"
+                    className="block px-4 py-2 hover:text-blue-100 transition text-base"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileServicesOpen(false);
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    Servisiranje toplotnih pumpi
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link
               href="/pricing"
               className="block px-4 py-2 hover:text-blue-100 transition"
