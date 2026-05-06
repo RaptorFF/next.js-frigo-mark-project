@@ -1,20 +1,56 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function ServicingPage() {
   return (
-    <div className="min-h-screen flex flex-col pt-20 bg-white">
-      <main className="flex-1 max-w-3xl mx-auto w-full py-16 px-4">
-        <h1 className="text-4xl font-bold mb-6">
-          Servisiranje električnih uređaja
-        </h1>
-        <p className="text-lg mb-4">
-          Profesionalno servisiranje i popravka električnih uređaja kako bi
-          radili pouzdano.
-        </p>
-        <ul className="list-disc pl-6 text-gray-700 space-y-2">
-          <li>Dijagnostika problema</li>
-          <li>Brza popravka</li>
-          <li>Kvalitetni rezervni delovi</li>
-        </ul>
-      </main>
-    </div>
+    <section className="mx-auto pt-32 pb-20 px-6 lg:px-8 bg-blue-50">
+      <div className="space-y-12">
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-8 tracking-tight text-left">
+            Servisiranje električnih uređaja
+          </h1>
+          <div className="overflow-hidden">
+            <Image
+              src="/stove-service.png"
+              alt="Servisiranje električnih uređaja"
+              width={1200}
+              height={720}
+              className="float-right ml-0 md:ml-8 mb-6 md:mb-4 w-full md:w-1/2 h-80 md:h-104 object-cover rounded-2xl shadow-lg"
+            />
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              Profesionalno servisiranje i popravka kućnih električnih uređaja
+              zahteva stručnost, iskustvo i pravu opremu. Naš tim tehničara
+              specijalizovan je za dijagnostiku i otklanjanje kvarova na širokom
+              spektru uređaja — od šporeta i rerni do veš mašina i frižidera.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Svaki servisni posao počinjemo detaljnom dijagnostikom kako bismo
+              tačno utvrdili uzrok kvara. Koristimo originalne rezervne delove i
+              savremene alate, čime garantujemo dugotrajan i bezbedan rad
+              uređaja nakon popravke. Naši tehničari su obučeni za rad sa svim
+              poznatim brendovima.
+            </p>
+            <p className="text-lg text-gray-700 mt-6 leading-relaxed">
+              Pored popravki, nudimo i preventivne preglede koji mogu sprečiti
+              skuplje kvarove u budućnosti. Redovnim servisiranjem produžavate
+              vek trajanja uređaja, smanjujete potrošnju električne energije i
+              doprinosite bezbednosti svog doma. Nakon svakog intervencije,
+              klijent dobija potvrdu o obavljenom servisu.
+            </p>
+            <p className="text-lg text-gray-700 mt-6 leading-relaxed">
+              Dostupni smo za hitne intervencije, kao i za redovne termine širom
+              Niša i okoline.{" "}
+              <Link
+                href="/contact"
+                className="text-black hover:text-blue-900 font-semibold"
+              >
+                Kontaktirajte
+              </Link>{" "}
+              nas i zakažite servis — brzo, pouzdano i po pristupačnoj ceni.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
