@@ -78,8 +78,11 @@ export default function ServiceBooking() {
               >
                 <option value="">Izaberite uslugu</option>
                 <option value="installation">Instalacija klima uređaja</option>
-                <option value="repair">Popravka grejanja</option>
                 <option value="maintenance">Održavanje HVAC sistema</option>
+                <option value="repair">Popravka električnih aparata</option>
+                <option value="heatPump">
+                  Instalacija i servis toplotnih pumpi
+                </option>
                 <option value="cleaning">Čišćenje kanala</option>
                 <option value="thermostat">Instalacija termostata</option>
                 <option value="emergency">Hitna usluga</option>
