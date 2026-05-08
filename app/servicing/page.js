@@ -7,19 +7,19 @@ export default function ServicingPage() {
       <div className="space-y-12">
         <div>
           <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-8 tracking-tight text-left">
-            Servisiranje električnih uređaja
+            Servisiranje kućnih aparata
           </h1>
           <div className="overflow-hidden">
             <Image
-              src="/stove-service.png"
-              alt="Servisiranje električnih uređaja"
+              src="/home-appliances.png"
+              alt="Servisiranje kućnih aparata"
               width={1200}
               height={720}
               className="float-right ml-0 md:ml-8 mb-6 md:mb-4 w-full md:w-1/2 h-80 md:h-104 object-cover rounded-2xl shadow-lg"
             />
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Profesionalno servisiranje i popravka kućnih električnih uređaja
-              zahteva stručnost, iskustvo i pravu opremu. Naš tim tehničara
+              Profesionalno servisiranje i popravka kućnih aparata zahteva
+              stručnost, iskustvo i pravu opremu. Naš tim tehničara
               specijalizovan je za dijagnostiku i otklanjanje kvarova na širokom
               spektru uređaja — od šporeta i rerni do veš mašina i frižidera.
             </p>

@@ -13,9 +13,9 @@ export const services = [
   },
   {
     id: 2,
-    title: "Servisiranje električnih uređaja",
+    title: "Servisiranje kućnih aparata",
     description:
-      "Profesionalno servisiranje i popravka električnih uređaja kako bi radili pouzdano",
+      "Profesionalno servisiranje i popravka kućnih aparata kako bi radili pouzdano",
     icon: "🔌",
     features: [
       "Dijagnostika problema",

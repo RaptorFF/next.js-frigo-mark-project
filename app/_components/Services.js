@@ -8,7 +8,7 @@ import { services } from "@/app/_data/services";
 
 const serviceBackgrounds = [
   "/ac-installation.jpeg",
-  "/heating-service1.jpeg",
+  "/stove.png",
   "/ac-washing.png",
 ];
 
