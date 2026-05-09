@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 
-export default function ContactForm() {
+export default function ContactForm({
+  withHeaderOffset = true,
+  sectionClassName = "",
+  containerClassName = "",
+  compact = false,
+}) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,12 +37,20 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="bg-white flex flex-col items-center pt-(--header-height) pb-16"
+      className={`bg-white flex flex-col items-center rounded-lg ${
+        compact ? "pb-8" : "pb-16"
+      } ${
+        withHeaderOffset ? "pt-(--header-height)" : "pt-6"
+      } ${sectionClassName}`}
     >
-      <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="text-center mb-16">
-          <h2 className="pt-10 text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            Kontaktirajte nas
+      <div
+        className={`max-w-3xl mx-auto px-6 sm:px-8 lg:px-10 ${containerClassName}`}
+      >
+        <div className={`text-center ${compact ? "mb-8" : "mb-16"}`}>
+          <h2
+            className={`${compact ? "pt-4 text-3xl md:text-4xl" : "pt-10 text-4xl md:text-5xl"} font-bold text-gray-900 mb-6 tracking-tight`}
+          >
+            Pošaljite nam poruku
           </h2>
         </div>
 
@@ -47,8 +60,11 @@ export default function ContactForm() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-8">
-          <div className="grid md:grid-cols-2 gap-8">
+        <form
+          onSubmit={handleSubmit}
+          className={compact ? "space-y-6" : "space-y-8"}
+        >
+          <div className={`grid md:grid-cols-2 ${compact ? "gap-6" : "gap-8"}`}>
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
                 Ime i prezime
@@ -78,7 +94,7 @@ export default function ContactForm() {
               />
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className={`grid md:grid-cols-2 ${compact ? "gap-6" : "gap-8"}`}>
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
                 Broj telefona
@@ -122,7 +138,7 @@ export default function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               required
-              rows="6"
+              rows={compact ? 5 : 6}
               className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition resize-none"
               placeholder="Recite nam nešto o vašim potrebama za HVAC..."
             ></textarea>
