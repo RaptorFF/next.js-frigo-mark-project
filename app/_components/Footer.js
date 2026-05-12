@@ -26,24 +26,33 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6 leading-tight">Usluge</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li>
-                <a href="#" className="hover:text-white transition">
+                <Link
+                  href="/installation"
+                  className="hover:text-white transition"
+                >
                   Instalacija klima uređaja
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
-                  Popravka grejanja
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition">
+                <Link
+                  href="/maintenance"
+                  className="hover:text-white transition"
+                >
                   Planovi održavanja
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <Link
+                  href="/heatingPump"
+                  className="hover:text-white transition"
+                >
+                  Popravka i servis toplotnih pumpi
+                </Link>
+              </li>
+              <li>
+                <Link href="/emergency" className="hover:text-white transition">
                   Hitne intervencije
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
