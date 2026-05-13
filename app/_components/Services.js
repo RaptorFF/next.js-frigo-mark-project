@@ -8,8 +8,8 @@ import { services } from "@/app/_data/services";
 
 const serviceBackgrounds = [
   "/ac-installation.jpeg",
-  "/stove.png",
   "/ac-washing.png",
+  "/stove.png",
 ];
 
 export default function Services() {
@@ -103,8 +103,8 @@ export default function Services() {
                     idx === 0
                       ? "/installation"
                       : idx === 1
-                        ? "/servicing"
-                        : "/maintenance"
+                        ? "/maintenance"
+                        : "/servicing"
                   }
                   className="w-full mt-auto bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold hover:shadow-md flex items-center justify-center"
                   scroll={false}

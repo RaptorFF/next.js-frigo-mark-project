@@ -50,7 +50,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/emergency" className="hover:text-white transition">
+                <Link href="/contact" className="hover:text-white transition">
                   Hitne intervencije
                 </Link>
               </li>

@@ -13,18 +13,6 @@ export const services = [
   },
   {
     id: 2,
-    title: "Servisiranje kućnih aparata",
-    description:
-      "Profesionalno servisiranje i popravka kućnih aparata kako bi radili pouzdano",
-    icon: "🔌",
-    features: [
-      "Dijagnostika problema",
-      "Brza popravka",
-      "Kvalitetni rezervni delovi",
-    ],
-  },
-  {
-    id: 3,
     title: "Održavanje HVAC sistema",
     description:
       "Redovno održavanje kako bi vaši sistemi radili glatko tokom cele godine",
@@ -33,6 +21,18 @@ export const services = [
       "Sezonski pregledi",
       "Zamena filtera",
       "Optimizacija performansi",
+    ],
+  },
+  {
+    id: 3,
+    title: "Servisiranje kućnih aparata",
+    description:
+      "Profesionalno servisiranje i popravka kućnih aparata kako bi radili pouzdano",
+    icon: "🔌",
+    features: [
+      "Dijagnostika problema",
+      "Brza popravka",
+      "Kvalitetni rezervni delovi",
     ],
   },
 ];
