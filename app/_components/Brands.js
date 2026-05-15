@@ -31,6 +31,7 @@ export default function Brendovi() {
                 key={brand.name + idx}
                 className="flex items-center justify-center bg-white rounded-lg shadow-md px-6 py-3 min-w-30 h-20 mx-2"
               >
+                {/** Preload first visible items so marquee does not show empty cards on mobile. */}
                 <Image
                   src={brand.img}
                   alt={brand.name}
@@ -38,8 +39,8 @@ export default function Brendovi() {
                   height={48}
                   className="h-12 object-contain max-w-25"
                   style={{ filter: "grayscale(0.2)" }}
-                  loading="lazy"
-                  unoptimized
+                  loading={idx < 6 ? "eager" : "lazy"}
+                  fetchPriority={idx < 6 ? "high" : "auto"}
                 />
               </div>
             ))}
