@@ -33,12 +33,12 @@ export default function Pricing() {
     <section
       id="pricing"
       ref={sectionRef}
-      className="section-container bg-blue-50 flex flex-col items-center"
+      className="section-container bg-blue-100 flex flex-col items-center"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            Cenovnici i Paketi
+            Paketi održavanja
           </h2>
           <p className="text-lg text-gray-600 mx-auto leading-relaxed py-4 pb-8">
             Izaberite savršen plan za vaše potrebe

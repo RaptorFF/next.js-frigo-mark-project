@@ -19,7 +19,7 @@ export default function Brendovi() {
   const marqueeBrands = [...brands, ...brands];
 
   return (
-    <section className="section-container bg-blue-50 py-8 overflow-hidden w-full max-w-full">
+    <section className="section-container bg-blue-100 py-8 overflow-hidden w-full max-w-full">
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-8 lg:px-10 text-center">
         <h1 className="mb-10 text-3xl font-semibold">
           Brendovi koje održavamo i ugrađujemo

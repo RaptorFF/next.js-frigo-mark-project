@@ -11,11 +11,18 @@ export default function Header() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const isScrolled = !isTop;
+  const isCompact = isScrolled && !mobileMenuOpen;
+  const shouldUseSolidHeader = !isHomePage || isScrolled || mobileMenuOpen;
+  const desktopNavItemClass = `hover:text-blue-100 transition ${
+    isCompact ? "px-3 py-1.5" : "px-4 py-2"
+  }`;
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsTop(window.scrollY === 0);
+      setIsTop(window.scrollY <= 10);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -24,27 +31,43 @@ export default function Header() {
     <header
       className={`fixed w-full text-white z-50 transition-all duration-500
         ${
-          !isHomePage || !isTop || mobileMenuOpen
-            ? "bg-linear-to-r from-blue-600 to-blue-800 header-solid border-b border-blue-700"
-            : "bg-transparent header-transparent border-b border-transparent"
+          shouldUseSolidHeader
+            ? "bg-linear-to-r from-blue-600/90 to-blue-800/90 backdrop-blur-md border-b border-blue-200/20 shadow-lg"
+            : "bg-transparent border-b border-transparent"
         }`}
     >
       <div className="mx-auto">
-        <div className="flex justify-between items-center h-20 px-4 md:px-8">
+        <div
+          className={`flex justify-between items-center px-4 md:px-8 transition-all duration-500 ${
+            isCompact ? "h-14 md:h-15" : "h-20"
+          }`}
+        >
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center space-x-3 text-2xl font-bold hover:text-blue-100 transition tracking-tight"
+            className={`flex items-center space-x-3 font-bold hover:text-blue-100 transition-all duration-500 tracking-tight ${
+              isCompact ? "text-lg md:text-xl" : "text-2xl"
+            }`}
           >
-            <span className="text-3xl p-1">❄️</span>
+            <span
+              className={`p-1 transition-all duration-500 ${
+                isCompact ? "text-xl md:text-2xl" : "text-3xl"
+              }`}
+            >
+              ❄️
+            </span>
             <span>Frigomark</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 text-lg font-medium">
+          <nav
+            className={`hidden md:flex items-center space-x-1 font-medium transition-all duration-500 ${
+              isCompact ? "text-base" : "text-lg"
+            }`}
+          >
             <Link
               href="/about"
-              className="hover:text-blue-100 transition px-4 py-2"
+              className={desktopNavItemClass}
               onClick={() => window.scrollTo(0, 0)}
             >
               O nama
@@ -55,7 +78,9 @@ export default function Header() {
               onMouseEnter={() => setServicesDropdownOpen(true)}
               onMouseLeave={() => setServicesDropdownOpen(false)}
             >
-              <button className="hover:text-blue-100 transition px-4 py-2 flex items-center gap-2">
+              <button
+                className={`${desktopNavItemClass} flex items-center gap-2`}
+              >
                 Usluge
                 <sub className="text-xs">▼</sub>
               </button>
@@ -103,7 +128,7 @@ export default function Header() {
             </div>
             <Link
               href="/pricing"
-              className="hover:text-blue-100 transition px-4 py-2"
+              className={desktopNavItemClass}
               onClick={() => window.scrollTo(0, 0)}
             >
               Cenovnik
@@ -111,14 +136,16 @@ export default function Header() {
 
             <Link
               href="/contact"
-              className="hover:text-blue-100 transition px-4 py-2"
+              className={desktopNavItemClass}
               onClick={() => window.scrollTo(0, 0)}
             >
               Kontakt
             </Link>
             <Link
               href="/serviceBooking"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-md hover:shadow-lg"
+              className={`bg-white text-blue-600 rounded-lg font-bold hover:bg-blue-50 transition-all duration-500 shadow-md hover:shadow-lg ${
+                isCompact ? "px-6 py-2" : "px-8 py-3"
+              }`}
               onClick={() => window.scrollTo(0, 0)}
             >
               Zakažite termin

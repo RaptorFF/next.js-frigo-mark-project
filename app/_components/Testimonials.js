@@ -33,7 +33,7 @@ export default function Testimonials() {
     <section
       id="testimonials"
       ref={sectionRef}
-      className="section-container bg-blue-50 flex flex-col items-center"
+      className="section-container bg-blue-100 flex flex-col items-center"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-20">

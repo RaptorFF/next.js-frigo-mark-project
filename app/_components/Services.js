@@ -42,7 +42,7 @@ export default function Services() {
     <section
       id="services"
       ref={sectionRef}
-      className="section-container scroll-mt-24 bg-blue-50 flex flex-col items-center"
+      className="section-container scroll-mt-24 bg-blue-100 flex flex-col items-center"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-20">

@@ -23,7 +23,7 @@ export const pricingPlans = [
     description: "Najpopularniji za stambene korisnike",
     features: [
       "Dve godišnje inspekcije",
-      "24/7 prioritetna podrška",
+      "Prioritetna korisnička podrška",
       "20% popusta na popravke",
       "Kvartalna zamena filtera",
       "Podrška putem telefona i e-pošte",
@@ -41,12 +41,12 @@ export const pricingPlans = [
     description: "Za komercijalne objekte i zahtevne korisnike",
     features: [
       "Kvartalne inspekcije",
-      "24/7 hitna podrška garantovana",
+      "Prioritet za hitne intervencije",
       "25% popusta na sve popravke",
       "Mesečna zamena filtera",
-      "Posvećeni menadžer naloga",
       "Izveštaji o performansama sistema",
       "Besplatno čišćenje kanala godišnje",
+      "Optimizacija sistema za energetsku efikasnost",
     ],
     color: "purple",
     popular: false,
