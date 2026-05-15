@@ -11,7 +11,7 @@ export default function HeatingPumpPage() {
           </h1>
           <div className="overflow-hidden">
             <Image
-              src="/heat-pump.jpg"
+              src="/images/heat-pump.jpg"
               alt="Toplotna pumpa u stambenom objektu"
               width={1200}
               height={720}

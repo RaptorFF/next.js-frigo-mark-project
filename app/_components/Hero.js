@@ -10,7 +10,7 @@ export default function Hero() {
         playsInline
         className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover object-[38%_center] md:object-center z-[-1]"
       >
-        <source src="/airflow.mp4" type="video/mp4" />
+        <source src="/video/airflow.mp4" type="video/mp4" />
       </video>
 
       <div className="relative z-10 flex flex-col items-start justify-center h-full text-left w-full max-w-3xl pl-4 md:pl-12 pr-4 translate-y-16 md:translate-y-24">

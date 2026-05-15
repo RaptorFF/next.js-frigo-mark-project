@@ -11,7 +11,7 @@ export default function InstalationPage() {
           </h1>
           <div className="overflow-hidden">
             <Image
-              src="/ac-installation.png"
+              src="/images/ac-installation.png"
               alt="Proces instalacije klima uređaja"
               width={1200}
               height={720}

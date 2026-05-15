@@ -7,9 +7,9 @@ import Link from "next/link";
 import { services } from "@/app/_data/services";
 
 const serviceBackgrounds = [
-  "/ac-installation.jpeg",
-  "/ac-washing.png",
-  "/stove.png",
+  "/images/ac-installation.jpeg",
+  "/images/ac-washing.png",
+  "/images/stove.png",
 ];
 
 export default function Services() {

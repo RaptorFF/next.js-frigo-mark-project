@@ -9,7 +9,7 @@ export default function ContactPage() {
           <article className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 min-h-117.5 flex flex-col lg:min-h-135">
             <div className="relative w-full basis-[55%] min-h-65">
               <Image
-                src="/ac-background.png"
+                src="/images/ac-background.png"
                 alt="Kontakt i podrška"
                 fill
                 priority
@@ -59,7 +59,7 @@ export default function ContactPage() {
             <ContactForm
               withHeaderOffset={false}
               compact
-              sectionClassName="bg-transparent pt-0 pb-6 h-full"
+              sectionClassName="bg-blue-50 pt-0 pb-6 h-full"
               containerClassName="max-w-none mx-0 px-6 sm:px-8 lg:px-10"
             />
           </div>

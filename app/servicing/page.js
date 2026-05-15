@@ -11,7 +11,7 @@ export default function ServicingPage() {
           </h1>
           <div className="overflow-hidden">
             <Image
-              src="/home-appliances.png"
+              src="/images/home-appliances.png"
               alt="Servisiranje kućnih aparata"
               width={1200}
               height={720}

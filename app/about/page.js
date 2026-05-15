@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,7 +11,7 @@ export default function AboutPage() {
           </h1>
           <div className="overflow-hidden">
             <Image
-              src="/ac-installation.jpeg"
+              src="/images/ac-installation.jpeg"
               alt="Ugradnja klima uredjaja"
               width={1200}
               height={720}
@@ -39,7 +38,7 @@ export default function AboutPage() {
 
         <div className="overflow-hidden">
           <Image
-            src="/heating-service1.jpeg"
+            src="/images/heating-service1.jpeg"
             alt="Servis sistema grejanja"
             width={1200}
             height={720}
@@ -59,9 +58,14 @@ export default function AboutPage() {
             zadovoljstvo klijenata su naš prioritet.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Za sva pitanja, savete ili zakazivanje servisa, slobodno nas{' '}
-            <Link href="/contact" className="text-black hover:text-blue-900 font-semibold">kontaktirajte</Link>.
-            Hvala što ste izabrali našu firmu!
+            Za sva pitanja, savete ili zakazivanje servisa, slobodno nas{" "}
+            <Link
+              href="/contact"
+              className="text-black hover:text-blue-900 font-semibold"
+            >
+              kontaktirajte
+            </Link>
+            . Hvala što ste izabrali našu firmu!
           </p>
         </div>
       </div>
