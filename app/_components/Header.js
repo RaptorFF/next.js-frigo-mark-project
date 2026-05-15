@@ -12,7 +12,7 @@ export default function Header() {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const isScrolled = !isTop;
-  const isCompact = isScrolled && !mobileMenuOpen;
+  const isCompact = (!isHomePage || isScrolled) && !mobileMenuOpen;
   const shouldUseSolidHeader = !isHomePage || isScrolled || mobileMenuOpen;
   const desktopNavItemClass = `hover:text-blue-100 transition ${
     isCompact ? "px-3 py-1.5" : "px-4 py-2"
