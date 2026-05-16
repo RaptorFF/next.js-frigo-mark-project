@@ -65,11 +65,7 @@ export default function Header() {
               isCompact ? "text-base" : "text-lg"
             }`}
           >
-            <Link
-              href="/about"
-              className={desktopNavItemClass}
-              onClick={() => window.scrollTo(0, 0)}
-            >
+            <Link href="/about" className={desktopNavItemClass}>
               O nama
             </Link>
             {/* Usluge with Dropdown */}
@@ -126,19 +122,11 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <Link
-              href="/pricing"
-              className={desktopNavItemClass}
-              onClick={() => window.scrollTo(0, 0)}
-            >
+            <Link href="/pricing" className={desktopNavItemClass}>
               Cenovnik
             </Link>
 
-            <Link
-              href="/contact"
-              className={desktopNavItemClass}
-              onClick={() => window.scrollTo(0, 0)}
-            >
+            <Link href="/contact" className={desktopNavItemClass}>
               Kontakt
             </Link>
             <Link
@@ -146,7 +134,6 @@ export default function Header() {
               className={`bg-white text-blue-600 rounded-lg font-bold hover:bg-blue-50 transition-all duration-500 shadow-md hover:shadow-lg ${
                 isCompact ? "px-6 py-2" : "px-8 py-3"
               }`}
-              onClick={() => window.scrollTo(0, 0)}
             >
               Zakažite termin
             </Link>
@@ -181,7 +168,6 @@ export default function Header() {
               className="block px-4 py-2 hover:text-blue-100 transition"
               onClick={() => {
                 setMobileMenuOpen(false);
-                window.scrollTo(0, 0);
               }}
             >
               O nama
@@ -203,7 +189,6 @@ export default function Header() {
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setMobileServicesOpen(false);
-                      window.scrollTo(0, 0);
                     }}
                   >
                     Instalacija klima uređaja
@@ -214,7 +199,6 @@ export default function Header() {
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setMobileServicesOpen(false);
-                      window.scrollTo(0, 0);
                     }}
                   >
                     Održavanje i servis
@@ -225,7 +209,6 @@ export default function Header() {
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setMobileServicesOpen(false);
-                      window.scrollTo(0, 0);
                     }}
                   >
                     Popravka rashladnih uređaja (frižideri, zamrzivači)
@@ -236,7 +219,6 @@ export default function Header() {
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setMobileServicesOpen(false);
-                      window.scrollTo(0, 0);
                     }}
                   >
                     Popravka električnih uređaja (veš mašine, šporeti)
@@ -247,7 +229,6 @@ export default function Header() {
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setMobileServicesOpen(false);
-                      window.scrollTo(0, 0);
                     }}
                   >
                     Servisiranje toplotnih pumpi
@@ -260,7 +241,6 @@ export default function Header() {
               className="block px-4 py-2 hover:text-blue-100 transition"
               onClick={() => {
                 setMobileMenuOpen(false);
-                window.scrollTo(0, 0);
               }}
             >
               Cenovnik
@@ -271,7 +251,6 @@ export default function Header() {
               className="block px-4 py-2 hover:text-blue-100 transition"
               onClick={() => {
                 setMobileMenuOpen(false);
-                window.scrollTo(0, 0);
               }}
             >
               Kontakt
@@ -281,7 +260,6 @@ export default function Header() {
               className="w-full bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition"
               onClick={() => {
                 setMobileMenuOpen(false);
-                window.scrollTo(0, 0);
               }}
             >
               Zakažite termin

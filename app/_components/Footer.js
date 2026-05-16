@@ -38,6 +38,11 @@ export default function Footer() {
                   href="/maintenance"
                   className="hover:text-white transition"
                 >
+                  Održavanje i servis klima uređaja
+                </Link>
+              </li>
+              <li>
+                <Link href="/#pricing" className="hover:text-white transition">
                   Planovi održavanja
                 </Link>
               </li>

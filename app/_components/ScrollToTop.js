@@ -6,6 +6,9 @@ export default function ScrollToTop() {
   const pathname = usePathname();
 
   useEffect(() => {
+    // Preserve native hash navigation (e.g. /#pricing) across route changes.
+    if (window.location.hash) return;
+
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [pathname]);
 
