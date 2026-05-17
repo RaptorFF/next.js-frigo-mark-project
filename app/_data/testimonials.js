@@ -19,7 +19,7 @@ export const testimonials = [
     id: 3,
     name: "Mihailo Petrović",
     title: "Menadžer nekretnina",
-    text: "Hitna služba u 2 ujutru i bili su ovde za 30 minuta. Sjajno osoblje i potpuno su popravili našu peć.",
+    text: "Hitna intervencija Frigomarka rešila je problem sa našim sistemom klimatizacije u roku od nekoliko sati. Izuzetno sam zadovoljan njihovom brzinom i efikasnošću.",
     rating: 5,
     image: "👨",
   },
