@@ -103,14 +103,14 @@ export default function Header() {
                     className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
-                    Popravka rashladnih uređaja(frižideri, zamrzivači)
+                    Popravka rashladnih uređaja(frižideri, zamrzivači...)
                   </Link>
                   <Link
                     href="/servicing"
                     className="block px-6 py-3 hover:bg-blue-50 transition border-b border-blue-100"
                     onClick={() => setServicesDropdownOpen(false)}
                   >
-                    Popravka električnih uređaja(veš mašine, šporeti)
+                    Popravka električnih uređaja(veš mašine, šporeti...)
                   </Link>
                   <Link
                     href="/heatingPump"
