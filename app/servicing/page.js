@@ -34,12 +34,10 @@ export default function ServicingPage() {
               Pored popravki, nudimo i preventivne preglede koji mogu sprečiti
               skuplje kvarove u budućnosti. Redovnim servisiranjem produžavate
               vek trajanja uređaja, smanjujete potrošnju električne energije i
-              doprinosite bezbednosti svog doma. Nakon svakog intervencije,
+              doprinosite bezbednosti svog doma. Nakon svake intervencije,
               klijent dobija potvrdu o obavljenom servisu.
             </p>
             <p className="text-lg text-gray-700 mt-6 leading-relaxed">
-              Dostupni smo za hitne intervencije, kao i za redovne termine širom
-              Niša i okoline.{" "}
               <Link
                 href="/contact"
                 className="text-black hover:text-blue-900 font-semibold"

@@ -46,11 +46,13 @@ export default function AboutPage() {
           />
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Pored klimatizacije i rashladnih uređaja, specijalizovani smo i za
-            servisiranje sistema toplotnih pumpi, kao i servisiranje električnih
-            uređaja poput veš mašina i električnih šporeta. Naš tim poseduje
-            znanje i iskustvo za brzo i efikasno rešavanje svih vrsta kvarova i
-            održavanje ovih uređaja, uz korišćenje kvalitetnih delova i
-            savremenih dijagnostičkih alata.
+            servisiranje uređaja poput veš mašina, električnih šporeta i drugih
+            kućnih aparata. Naš tim poseduje znanje i iskustvo za brzo i
+            efikasno rešavanje svih vrsta kvarova i održavanje ovih uređaja, uz
+            korišćenje kvalitetnih delova i savremenih dijagnostičkih alata.
+            Takođe pružamo usluge održavanja i popravke toplotnih pumpi,
+            osiguravajući da vaši sistemi grejanja i hlađenja funkcionišu
+            optimalno tokom cele godine.
           </p>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Poverite nam brigu o vašoj klimatizaciji, rashladnim uređajima,
