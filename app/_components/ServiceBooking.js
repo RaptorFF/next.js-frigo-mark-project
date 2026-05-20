@@ -1,20 +1,24 @@
 "use client";
 
 import { useState } from "react";
+import { submitReservation } from "@/app/_actions/reservations";
+
+const EMPTY_FORM = {
+  serviceType: "",
+  date: "",
+  time: "",
+  name: "",
+  email: "",
+  phone: "",
+  address: "",
+  notes: "",
+};
 
 export default function ServiceBooking() {
-  const [bookingData, setBookingData] = useState({
-    serviceType: "",
-    date: "",
-    time: "",
-    name: "",
-    email: "",
-    phone: "",
-    address: "",
-    notes: "",
-  });
-
+  const [bookingData, setBookingData] = useState(EMPTY_FORM);
   const [booked, setBooked] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,21 +28,22 @@ export default function ServiceBooking() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Booking submitted:", bookingData);
-    setBooked(true);
-    setBookingData({
-      serviceType: "",
-      date: "",
-      time: "",
-      name: "",
-      email: "",
-      phone: "",
-      address: "",
-      notes: "",
-    });
-    setTimeout(() => setBooked(false), 3000);
+    setLoading(true);
+    setError("");
+
+    const result = await submitReservation(bookingData);
+
+    setLoading(false);
+
+    if (result.success) {
+      setBooked(true);
+      setBookingData(EMPTY_FORM);
+      setTimeout(() => setBooked(false), 5000);
+    } else {
+      setError(result.error ?? "Došlo je do greške. Pokušajte ponovo.");
+    }
   };
 
   return (
@@ -57,6 +62,12 @@ export default function ServiceBooking() {
           <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
             ✓ Vaš termin je uspešno zakazan! Potvrdu ćete uskoro dobiti putem
             e-pošte.
+          </div>
+        )}
+
+        {error && (
+          <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+            {error}
           </div>
         )}
 
@@ -195,9 +206,10 @@ export default function ServiceBooking() {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition text-lg shadow-md hover:shadow-lg"
+            disabled={loading}
+            className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition text-lg shadow-md hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Potvrdite Rezervaciju
+            {loading ? "Slanje..." : "Potvrdite Rezervaciju"}
           </button>
         </form>
       </div>
