@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Suspense } from "react";
 import "./_styles/globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
@@ -28,7 +29,9 @@ export default function RootLayout({ children }) {
       >
         <ScrollToTop />
         <Header />
-        <main className="">{children}</main>
+        <Suspense fallback={<main className="" />}>
+          <main className="">{children}</main>
+        </Suspense>
         <Footer />
       </body>
     </html>
