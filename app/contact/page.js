@@ -29,7 +29,7 @@ export default function ContactPage() {
                 </p>
                 <div className="text-gray-700 text-lg space-y-4">
                   <p>
-                    <span className="font-semibold">Telefon:</span> 062 286 9648
+                    <span className="font-semibold">Telefon:</span> 064/286-9648
                   </p>
                   <p>
                     <span className="font-semibold">Adresa:</span> Subotička 12,
