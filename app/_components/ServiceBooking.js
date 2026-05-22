@@ -170,7 +170,7 @@ export default function ServiceBooking() {
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
-                placeholder="(123) 456-7890"
+                placeholder="060/123-4567"
               />
             </div>
           </div>
