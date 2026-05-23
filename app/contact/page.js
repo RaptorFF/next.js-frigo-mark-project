@@ -37,7 +37,7 @@ export default function ContactPage() {
                   </p>
                   <p>
                     <span className="font-semibold">Email:</span>{" "}
-                    kontakt@primerfirma.rs
+                    aleksandarm985@gmail.com
                   </p>
                 </div>
               </div>
