@@ -21,7 +21,8 @@ export default function Footer() {
               📞{" "}
               <a
                 href="tel:+381642869648"
-                className="hover:text-white transition"
+                className="inline-flex items-center rounded-md bg-blue-500/20 px-2 py-1 text-blue-200 underline underline-offset-3 decoration-2 hover:bg-blue-500/30 hover:text-white transition sm:bg-transparent sm:px-0 sm:py-0 sm:text-gray-300 sm:underline sm:decoration-1"
+                aria-label="Pozovite broj +381 64 286 9648"
               >
                 +381 64 286 9648
               </a>
