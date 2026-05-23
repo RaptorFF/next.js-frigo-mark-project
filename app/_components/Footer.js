@@ -21,13 +21,26 @@ export default function Footer() {
               📞{" "}
               <a
                 href="tel:+381642869648"
-                className="inline-flex items-center rounded-md bg-blue-500/20 px-2 py-1 text-blue-200 underline underline-offset-3 decoration-2 hover:bg-blue-500/30 hover:text-white transition sm:bg-transparent sm:px-0 sm:py-0 sm:text-gray-300 sm:underline sm:decoration-1"
+                className="inline-flex items-center rounded-md bg-blue-500/20 px-2 py-1 text-blue-200 hover:bg-blue-500/30 hover:text-white transition sm:bg-transparent sm:px-0 sm:py-0 sm:text-gray-300"
                 aria-label="Pozovite broj +381 64 286 9648"
               >
                 +381 64 286 9648
               </a>
             </p>
-            <p className="text-gray-400 text-sm">✉️ aleksandarm985@gmail.com</p>
+            <p className="text-gray-400 text-sm mt-2">
+              ✉️{" "}
+              <a
+                href="mailto:aleksandarm985@gmail.com"
+                className="inline-flex items-center rounded-md bg-blue-500/20 px-2 py-1 text-blue-200 hover:bg-blue-500/30 hover:text-white transition sm:bg-transparent sm:px-0 sm:py-0 sm:text-gray-300"
+                aria-label="Pošaljite email na aleksandarm985@gmail.com"
+              >
+                aleksandarm985@gmail.com
+              </a>
+            </p>
+            <p className="text-gray-400 text-sm mt-2">
+              <span className="block">🕘 Radno vreme:</span>
+              <span className="block pl-6">Pon - Pet 09:00 - 17:00</span>
+            </p>
           </div>
 
           {/* Services */}
