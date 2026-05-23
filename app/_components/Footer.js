@@ -79,11 +79,18 @@ export default function Footer() {
               <li>
                 <div className="flex text-2xl pt-1" style={{ gap: "1rem" }}>
                   <Link
-                    href="#"
+                    href="https://www.facebook.com/frigomark.frigomark"
                     className="hover:text-white transition"
                     aria-label="Facebook"
                   >
                     <FaFacebook />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/frigomarkfrigomark/"
+                    className="hover:text-white transition"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram />
                   </Link>
                   <Link
                     href="#"
@@ -98,13 +105,6 @@ export default function Footer() {
                     aria-label="LinkedIn"
                   >
                     <FaLinkedin />
-                  </Link>
-                  <Link
-                    href="#"
-                    className="hover:text-white transition"
-                    aria-label="Instagram"
-                  >
-                    <FaInstagram />
                   </Link>
                 </div>
               </li>
