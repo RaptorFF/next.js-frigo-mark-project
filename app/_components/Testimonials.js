@@ -8,9 +8,9 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="section-container bg-blue-100 flex flex-col items-center"
+      className="section-container bg-blue-100 flex flex-col items-center overflow-x-clip"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 overflow-x-clip">
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
             Šta naši korisnici kažu
@@ -21,12 +21,12 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="overflow-hidden relative w-full marquee-fade">
+        <div className="overflow-hidden relative mx-auto w-full max-w-full marquee-fade">
           <div className="flex w-max gap-4 sm:gap-6 animate-marquee marquee-mobile-slower py-2">
             {marqueeTestimonials.map((testimonial, idx) => (
               <article
                 key={`${testimonial.id}-${idx}`}
-                className="bg-gray-50 rounded-xl shadow-md p-5 sm:p-6 border border-gray-200 w-[calc(100vw-2.5rem)] max-w-[20rem] sm:w-88 md:w-[24rem] shrink-0 hover:shadow-lg transition-shadow"
+                className="bg-gray-50 rounded-xl shadow-md p-5 sm:p-6 border border-gray-200 w-[min(19rem,calc(100vw-2rem))] sm:w-88 md:w-[24rem] shrink-0 hover:shadow-lg transition-shadow"
               >
                 <div className="flex text-yellow-400 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
