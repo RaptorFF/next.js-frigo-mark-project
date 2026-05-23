@@ -7,7 +7,7 @@ export default function MaintenancePage() {
       <div className="space-y-12">
         <div>
           <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-8 tracking-tight text-left">
-            Servisiranje i održavanje klima uređaja
+            Održavanje klima uređaja
           </h1>
           <div className="overflow-hidden">
             <Image

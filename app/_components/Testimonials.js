@@ -1,38 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { testimonials } from "@/app/_data/testimonials";
 
 export default function Testimonials() {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-
-    if (!section) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-
-        setIsVisible(true);
-        observer.disconnect();
-      },
-      {
-        threshold: 0.2,
-      },
-    );
-
-    observer.observe(section);
-
-    return () => observer.disconnect();
-  }, []);
+  const marqueeTestimonials = [...testimonials, ...testimonials];
 
   return (
     <section
       id="testimonials"
-      ref={sectionRef}
       className="section-container bg-blue-100 flex flex-col items-center"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
@@ -46,39 +21,35 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {testimonials.map((testimonial, idx) => (
-            <div
-              key={testimonial.id}
-              className={`bg-gray-50 rounded-xl shadow-md p-10 border border-gray-200 transform transition-all duration-1000 ease-out hover:shadow-lg ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-8 opacity-0"
-              }`}
-              style={{ transitionDelay: `${idx * 280}ms` }}
-            >
-              {/* Star Rating */}
-              <div className="flex text-yellow-400 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <span key={i}>⭐</span>
-                ))}
-              </div>
-
-              {/* Testimonial Text */}
-              <p className="text-gray-700 mb-6 italic">
-                &quot;{testimonial.text}&quot;
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center">
-                <div className="text-4xl mr-4">{testimonial.image}</div>
-                <div>
-                  <p className="font-bold text-gray-900">{testimonial.name}</p>
-                  <p className="text-gray-600 text-sm">{testimonial.title}</p>
+        <div className="overflow-hidden relative w-full marquee-fade">
+          <div className="flex w-max gap-6 animate-marquee py-2">
+            {marqueeTestimonials.map((testimonial, idx) => (
+              <article
+                key={`${testimonial.id}-${idx}`}
+                className="bg-gray-50 rounded-xl shadow-md p-6 border border-gray-200 w-[20rem] sm:w-88 md:w-[24rem] shrink-0 hover:shadow-lg transition-shadow"
+              >
+                <div className="flex text-yellow-400 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i}>⭐</span>
+                  ))}
                 </div>
-              </div>
-            </div>
-          ))}
+
+                <p className="text-gray-700 mb-6 italic leading-relaxed line-clamp-4">
+                  &quot;{testimonial.text}&quot;
+                </p>
+
+                <div className="flex items-center">
+                  <div className="text-4xl mr-4">{testimonial.image}</div>
+                  <div>
+                    <p className="font-bold text-gray-900">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-gray-600 text-sm">{testimonial.title}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
