@@ -17,7 +17,15 @@ export default function Footer() {
             <p className="text-gray-400 leading-relaxed">
               Vaš pouzdani HVAC servis provajder već više od 20 godina.
             </p>
-            <p className="text-gray-400 mt-4 text-sm">📞 +381 64 286 9648</p>
+            <p className="text-gray-400 mt-4 text-sm">
+              📞{" "}
+              <a
+                href="tel:+381642869648"
+                className="hover:text-white transition"
+              >
+                +381 64 286 9648
+              </a>
+            </p>
             <p className="text-gray-400 text-sm">✉️ aleksandarm985@gmail.com</p>
           </div>
 
