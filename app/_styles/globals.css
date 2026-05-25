@@ -77,9 +77,10 @@ h6 {
   font-weight: 700;
 }
 
-/* p {
-  color: var(--text-light);
-} */
+.header-logo img {
+  transform: scale(1.3); /* povećava prikaz za 30% */
+  transform-origin: center;
+}
 
 /* Custom animations */
 @keyframes fadeInUp {
