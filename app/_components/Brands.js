@@ -12,7 +12,6 @@ export default function Brendovi() {
     { name: "Beko", img: "/brands/beko.jpg" },
     { name: "Electrolux", img: "/brands/electrolux.png" },
     { name: "Candy", img: "/brands/candy.png" },
-    { name: "Indesit", img: "/brands/indesit.png" },
   ];
 
   // Dupliramo niz za beskonačnu animaciju
