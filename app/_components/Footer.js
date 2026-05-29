@@ -114,20 +114,6 @@ export default function Footer() {
                   >
                     <FaInstagram />
                   </Link>
-                  <Link
-                    href="#"
-                    className="hover:text-white transition"
-                    aria-label="Twitter"
-                  >
-                    <FaTwitter />
-                  </Link>
-                  <Link
-                    href="#"
-                    className="hover:text-white transition"
-                    aria-label="LinkedIn"
-                  >
-                    <FaLinkedin />
-                  </Link>
                 </div>
               </li>
             </ul>
