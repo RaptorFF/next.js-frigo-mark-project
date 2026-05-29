@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -14,6 +15,12 @@ export default function Header() {
   const isScrolled = !isTop;
   const isCompact = (!isHomePage || isScrolled) && !mobileMenuOpen;
   const shouldUseSolidHeader = !isHomePage || isScrolled || mobileMenuOpen;
+  const frigoClass = shouldUseSolidHeader
+    ? "bg-linear-to-b from-cyan-100 via-sky-200 to-blue-100 bg-clip-text text-transparent"
+    : "bg-linear-to-b from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent";
+  const markClass = shouldUseSolidHeader
+    ? "bg-linear-to-b from-white via-slate-100 to-slate-300 bg-clip-text text-transparent"
+    : "bg-linear-to-b from-slate-100 via-slate-300 to-slate-500 bg-clip-text text-transparent";
   const desktopNavItemClass = `hover:text-blue-100 transition ${
     isCompact ? "px-3 py-1.5" : "px-4 py-2"
   }`;
@@ -45,18 +52,26 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className={`flex items-center space-x-3 font-bold hover:text-blue-100 transition-all duration-500 tracking-tight ${
-              isCompact ? "text-lg md:text-xl" : "text-2xl"
-            }`}
+            className="flex items-center gap-2 md:gap-3 hover:opacity-90 transition-all duration-500"
           >
+            <Image
+              src="/images/logo1.png"
+              alt="Frigomark icon"
+              width={36}
+              height={36}
+              className={`w-auto object-contain shrink-0 transition-all duration-500 ${
+                isCompact ? "h-8 md:h-9" : "h-10"
+              }`}
+              priority
+            />
             <span
-              className={`p-1 transition-all duration-500 ${
-                isCompact ? "text-xl md:text-2xl" : "text-3xl"
+              className={`font-extrabold tracking-tight leading-none drop-shadow-[0_1px_0_rgba(255,255,255,0.35)] transition-all duration-500 ${
+                isCompact ? "text-lg md:text-xl" : "text-xl md:text-2xl"
               }`}
             >
-              ❄️
+              <span className={frigoClass}>FRIGO</span>
+              <span className={markClass}>MARK</span>
             </span>
-            <span>Frigomark</span>
           </Link>
 
           {/* Desktop Navigation */}
