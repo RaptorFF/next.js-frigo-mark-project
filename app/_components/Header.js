@@ -22,7 +22,7 @@ export default function Header() {
     ? "bg-linear-to-b from-white via-slate-100 to-slate-300 bg-clip-text text-transparent"
     : "bg-linear-to-b from-slate-100 via-slate-300 to-slate-500 bg-clip-text text-transparent";
   const desktopNavItemClass = `hover:text-blue-100 transition ${
-    isCompact ? "px-3 py-1.5" : "px-4 py-2"
+    isCompact ? "px-2.5 py-1.5 xl:px-3" : "px-3 py-2 xl:px-4"
   }`;
 
   useEffect(() => {
@@ -45,14 +45,14 @@ export default function Header() {
     >
       <div className="mx-auto">
         <div
-          className={`flex justify-between items-center px-4 md:px-8 transition-all duration-500 ${
-            isCompact ? "h-14 md:h-15" : "h-20"
+          className={`flex justify-between items-center px-3 min-[390px]:px-4 min-[924px]:px-8 transition-all duration-500 ${
+            isCompact ? "h-14 min-[924px]:h-15" : "h-20"
           }`}
         >
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 md:gap-3 hover:opacity-90 transition-all duration-500"
+            className="flex items-center gap-1 min-[390px]:gap-2 min-[924px]:gap-3 hover:opacity-90 transition-all duration-500"
           >
             <Image
               src="/images/logo1.png"
@@ -60,13 +60,17 @@ export default function Header() {
               width={36}
               height={36}
               className={`w-auto object-contain shrink-0 transition-all duration-500 ${
-                isCompact ? "h-8 md:h-9" : "h-10"
+                isCompact
+                  ? "h-7 min-[390px]:h-8 min-[924px]:h-9 scale-115 min-[390px]:scale-120 min-[924px]:scale-125"
+                  : "h-8 min-[390px]:h-10 scale-120 min-[390px]:scale-125"
               }`}
               priority
             />
             <span
               className={`font-extrabold tracking-tight leading-none drop-shadow-[0_1px_0_rgba(255,255,255,0.35)] transition-all duration-500 ${
-                isCompact ? "text-lg md:text-xl" : "text-xl md:text-2xl"
+                isCompact
+                  ? "text-base min-[390px]:text-lg min-[924px]:text-xl"
+                  : "text-lg min-[390px]:text-xl min-[924px]:text-2xl"
               }`}
             >
               <span className={frigoClass}>FRIGO</span>
@@ -76,8 +80,8 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav
-            className={`hidden md:flex items-center space-x-1 font-medium transition-all duration-500 ${
-              isCompact ? "text-base" : "text-lg"
+            className={`hidden min-[924px]:flex items-center space-x-0.5 xl:space-x-1 font-medium transition-all duration-500 ${
+              isCompact ? "text-sm xl:text-base" : "text-base xl:text-lg"
             }`}
           >
             <Link href="/about" className={desktopNavItemClass}>
@@ -147,7 +151,7 @@ export default function Header() {
             <Link
               href="/serviceBooking"
               className={`bg-white text-blue-600 rounded-lg font-bold hover:bg-blue-50 transition-all duration-500 shadow-md hover:shadow-lg ${
-                isCompact ? "px-6 py-2" : "px-8 py-3"
+                isCompact ? "px-4 py-2 xl:px-6" : "px-5 py-2.5 xl:px-8 xl:py-3"
               }`}
             >
               Zakažite termin
@@ -156,11 +160,11 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="min-[924px]:hidden text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5 min-[390px]:w-6 min-[390px]:h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -177,7 +181,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 text-lg font-medium bg-linear-to-r from-blue-600 to-blue-800">
+          <nav className="min-[924px]:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 px-3 min-[390px]:px-4 text-lg font-medium bg-linear-to-r from-blue-600 to-blue-800">
             <Link
               href="/about"
               className="block px-4 py-2 hover:text-blue-100 transition"
@@ -197,10 +201,10 @@ export default function Header() {
                 <sub className="text-xs">{mobileServicesOpen ? "▲" : "▼"}</sub>
               </button>
               {mobileServicesOpen && (
-                <div className="pl-6 mt-1 space-y-1 border-l border-blue-400 ml-4">
+                <div className="pl-4 min-[390px]:pl-6 mt-1 space-y-1 border-l border-blue-400 ml-2 min-[390px]:ml-4 max-w-88">
                   <Link
                     href="/installation"
-                    className="block px-4 py-2 hover:text-blue-100 transition text-base"
+                    className="block px-3 min-[390px]:px-4 py-2 hover:text-blue-100 transition text-base leading-snug wrap-break-word"
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setMobileServicesOpen(false);
@@ -210,7 +214,7 @@ export default function Header() {
                   </Link>
                   <Link
                     href="/maintenance"
-                    className="block px-4 py-2 hover:text-blue-100 transition text-base"
+                    className="block px-3 min-[390px]:px-4 py-2 hover:text-blue-100 transition text-base leading-snug wrap-break-word"
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setMobileServicesOpen(false);
@@ -220,7 +224,7 @@ export default function Header() {
                   </Link>
                   <Link
                     href="/servicing"
-                    className="block px-4 py-2 hover:text-blue-100 transition text-base"
+                    className="block px-3 min-[390px]:px-4 py-2 hover:text-blue-100 transition text-base leading-snug wrap-break-word"
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setMobileServicesOpen(false);
@@ -230,7 +234,7 @@ export default function Header() {
                   </Link>
                   <Link
                     href="/servicing"
-                    className="block px-4 py-2 hover:text-blue-100 transition text-base"
+                    className="block px-3 min-[390px]:px-4 py-2 hover:text-blue-100 transition text-base leading-snug wrap-break-word"
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setMobileServicesOpen(false);
@@ -240,7 +244,7 @@ export default function Header() {
                   </Link>
                   <Link
                     href="/heatingPump"
-                    className="block px-4 py-2 hover:text-blue-100 transition text-base"
+                    className="block px-3 min-[390px]:px-4 py-2 hover:text-blue-100 transition text-base leading-snug wrap-break-word"
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setMobileServicesOpen(false);
