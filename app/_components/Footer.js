@@ -1,8 +1,13 @@
 import Link from "next/link";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const frigoClass =
+    "bg-linear-to-b from-sky-300 via-blue-500 to-blue-700 bg-clip-text text-transparent";
+  const markClass =
+    "bg-linear-to-b from-white via-slate-100 to-slate-300 bg-clip-text text-transparent";
 
   return (
     <footer className="bg-gray-900 text-white py-16 border-t border-gray-800">
@@ -10,9 +15,18 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-6 flex items-center space-x-2 leading-tight">
-              <span className="text-2xl">❄️</span>
-              <span>Frigomark</span>
+            <h3 className="text-xl font-bold mb-6 flex items-center gap-2 leading-tight">
+              <Image
+                src="/images/logo1.png"
+                alt="Frigomark icon"
+                width={36}
+                height={36}
+                className="h-8 w-auto object-contain shrink-0 scale-115"
+              />
+              <span className="font-extrabold tracking-tight leading-none drop-shadow-[0_1px_0_rgba(255,255,255,0.35)]">
+                <span className={frigoClass}>Frigo</span>
+                <span className={markClass}>mark</span>
+              </span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
               Vaš pouzdani HVAC servis provajder već više od 20 godina.
