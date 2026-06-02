@@ -1,10 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
   const [isVideoReady, setIsVideoReady] = useState(false);
+  useEffect(() => {
+    const fallbackTimer = setTimeout(() => {
+      setIsVideoReady(true);
+    }, 1200);
+
+    return () => clearTimeout(fallbackTimer);
+  }, []);
 
   const frigoClass =
     "bg-linear-to-b from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent";
@@ -18,8 +25,9 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="metadata"
-        poster="/images/ac-background.png"
+        preload="auto"
+        poster="/images/living_room.png"
+        onLoadedMetadata={() => setIsVideoReady(true)}
         onLoadedData={() => setIsVideoReady(true)}
         onCanPlay={() => setIsVideoReady(true)}
         className={`absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover object-[38%_center] md:object-center z-0 transition-all duration-500 ${
@@ -30,7 +38,7 @@ export default function Hero() {
       </video>
 
       {!isVideoReady && (
-        <div className="pointer-events-none absolute inset-0 z-10 bg-linear-to-b from-slate-900/90 via-blue-900/75 to-slate-900/90 backdrop-blur-sm animate-pulse" />
+        <div className="pointer-events-none absolute inset-0 z-10 bg-linear-to-b from-slate-900/90 via-blue-900/70 to-slate-900/90" />
       )}
 
       <div className="relative z-20 flex flex-col items-start justify-center h-full text-left w-full max-w-3xl pl-4 md:pl-12 pr-4 translate-y-16 md:translate-y-24">
