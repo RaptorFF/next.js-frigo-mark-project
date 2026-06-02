@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { BLUR_DATA_URL } from "@/app/_data/media";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,6 +22,8 @@ export default function Footer() {
                 alt="Frigomark icon"
                 width={36}
                 height={36}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="h-8 w-auto object-contain shrink-0 scale-115"
               />
               <span className="font-extrabold tracking-tight leading-none drop-shadow-[0_1px_0_rgba(255,255,255,0.35)]">

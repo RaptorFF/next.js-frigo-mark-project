@@ -9,6 +9,7 @@ export default function HeaderLogo() {
         alt="Frigomark logo"
         width={180} // osnovna širina
         height={60} // visina logotipa
+        placeholder="blur"
         style={{
           maxWidth: "100%",
           height: "auto",
