@@ -77,9 +77,10 @@ export default function Footer() {
                   Održavanje i servis klima uređaja
                 </Link>
               </li>
+
               <li>
-                <Link href="/#pricing" className="hover:text-white transition">
-                  Planovi održavanja
+                <Link href="/servicing" className="hover:text-white transition">
+                  Servis kućnih aparata
                 </Link>
               </li>
               <li>
@@ -88,11 +89,6 @@ export default function Footer() {
                   className="hover:text-white transition"
                 >
                   Popravka i servis toplotnih pumpi
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white transition">
-                  Hitne intervencije
                 </Link>
               </li>
             </ul>
