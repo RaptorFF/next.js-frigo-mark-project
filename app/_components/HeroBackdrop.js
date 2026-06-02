@@ -1,40 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 export default function HeroBackdrop() {
   const [isVideoReady, setIsVideoReady] = useState(false);
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-
-    if (!video) return;
-
-    const playVideo = () => {
-      const playPromise = video.play();
-
-      if (playPromise?.catch) {
-        playPromise.catch(() => {});
-      }
-    };
-
-    playVideo();
-
-    const handlePageShow = () => {
-      playVideo();
-    };
-
-    window.addEventListener("pageshow", handlePageShow);
-
-    return () => {
-      window.removeEventListener("pageshow", handlePageShow);
-    };
-  }, []);
-
-  const handleVideoReady = () => {
-    setIsVideoReady(true);
-  };
 
   return (
     <div
@@ -42,16 +11,13 @@ export default function HeroBackdrop() {
       className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 opacity-100"
     >
       <video
-        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
         poster="/images/living_room.webp"
-        onLoadedData={handleVideoReady}
-        onCanPlay={handleVideoReady}
-        onPlaying={handleVideoReady}
+        onLoadedData={() => setIsVideoReady(true)}
         className={`absolute inset-0 h-full w-full object-cover object-[38%_center] md:object-center transition-all duration-500 ${
           isVideoReady ? "blur-0 scale-100" : "blur-md scale-105"
         }`}
