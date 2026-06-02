@@ -1,6 +1,11 @@
-function Spinner() {
+function Spinner({ delay = true }) {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div
+      className={`loading-state ${delay ? "loading-state--deferred" : ""}`}
+      role="status"
+      aria-live="polite"
+      aria-label="Ucitavanje stranice"
+    >
       <div className="spinner"></div>
     </div>
   );
