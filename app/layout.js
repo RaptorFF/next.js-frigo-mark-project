@@ -4,6 +4,7 @@ import "./_styles/globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import ScrollToTop from "./_components/ScrollToTop";
+import HeroBackdrop from "./_components/HeroBackdrop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,8 +30,9 @@ export default function RootLayout({ children }) {
       >
         <ScrollToTop />
         <Header />
+        <HeroBackdrop />
         <Suspense fallback={<main className="" />}>
-          <main className="">{children}</main>
+          <main className="relative z-10">{children}</main>
         </Suspense>
         <Footer />
       </body>

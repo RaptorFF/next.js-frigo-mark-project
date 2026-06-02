@@ -1,47 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const [isVideoReady, setIsVideoReady] = useState(false);
-  useEffect(() => {
-    const fallbackTimer = setTimeout(() => {
-      setIsVideoReady(true);
-    }, 1200);
-
-    return () => clearTimeout(fallbackTimer);
-  }, []);
-
   const frigoClass =
     "bg-linear-to-b from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent";
   const markClass =
     "bg-linear-to-b from-slate-100 via-slate-300 to-slate-500 bg-clip-text text-transparent";
 
   return (
-    <section className="relative isolate w-full h-screen overflow-hidden bg-slate-900">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        poster="/images/living_room.webp"
-        onLoadedMetadata={() => setIsVideoReady(true)}
-        onLoadedData={() => setIsVideoReady(true)}
-        onCanPlay={() => setIsVideoReady(true)}
-        className={`absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover object-[38%_center] md:object-center z-0 transition-all duration-500 ${
-          isVideoReady ? "blur-0 scale-100" : "blur-md scale-105"
-        }`}
-      >
-        <source src="/video/airflow.mp4" type="video/mp4" />
-      </video>
-
-      {!isVideoReady && (
-        <div className="pointer-events-none absolute inset-0 z-10 bg-linear-to-b from-slate-900/90 via-blue-900/70 to-slate-900/90" />
-      )}
-
-      <div className="relative z-20 flex flex-col items-start justify-center h-full text-left w-full max-w-3xl pl-4 md:pl-12 pr-4 translate-y-16 md:translate-y-24">
+    <section className="relative isolate z-10 w-full h-screen overflow-hidden bg-transparent">
+      <div className="relative z-10 flex flex-col items-start justify-center h-full text-left w-full max-w-3xl pl-4 md:pl-12 pr-4 translate-y-16 md:translate-y-24">
         <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6 fade-in-up [animation-delay:100ms] [animation-fill-mode:both]">
           Budi cool sa{" "}
           <span className="block">
