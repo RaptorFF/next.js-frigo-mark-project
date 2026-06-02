@@ -9,8 +9,8 @@ import { BLUR_DATA_URL } from "@/app/_data/media";
 
 const serviceBackgrounds = [
   "/images/ac-installation.jpeg",
-  "/images/ac-washing.png",
-  "/images/stove.png",
+  "/images/ac-washing.webp",
+  "/images/stove.webp",
 ];
 
 export default function Services() {

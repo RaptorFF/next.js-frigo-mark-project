@@ -10,7 +10,7 @@ export default function ContactPage() {
           <article className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 min-h-117.5 flex flex-col lg:min-h-135">
             <div className="relative w-full basis-[55%] min-h-65">
               <Image
-                src="/images/ac-background.png"
+                src="/images/ac-background.webp"
                 alt="Kontakt i podrška"
                 fill
                 priority

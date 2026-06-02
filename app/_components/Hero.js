@@ -25,8 +25,8 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="auto"
-        poster="/images/living_room.png"
+        preload="metadata"
+        poster="/images/living_room.webp"
         onLoadedMetadata={() => setIsVideoReady(true)}
         onLoadedData={() => setIsVideoReady(true)}
         onCanPlay={() => setIsVideoReady(true)}

@@ -41,7 +41,6 @@ export default function Brendovi() {
                   blurDataURL={BLUR_DATA_URL}
                   className="h-12 object-contain max-w-25"
                   style={{ filter: "grayscale(0.2)" }}
-                  loading="eager"
                 />
               </div>
             ))}
