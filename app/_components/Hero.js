@@ -1,16 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import HeroBackdrop from "./HeroBackdrop";
+
+// Dynamically import HeroBackdrop with SSR disabled to prevent hydration issues
+const HeroBackdrop = dynamic(() => import("./HeroBackdrop"), {
+  ssr: false,
+});
 
 export default function Hero() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   const frigoClass =
     "bg-linear-to-b from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent";
   const markClass =
@@ -18,7 +16,7 @@ export default function Hero() {
 
   return (
     <section className="relative isolate z-10 w-full h-screen overflow-hidden bg-transparent">
-      {isMounted ? <HeroBackdrop /> : null}
+      <HeroBackdrop />
       <div className="relative z-10 flex flex-col items-start justify-center h-full text-left w-full max-w-3xl pl-4 md:pl-12 pr-4 translate-y-16 md:translate-y-24">
         <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6 fade-in-up [animation-delay:100ms] [animation-fill-mode:both]">
           Budi cool sa{" "}
