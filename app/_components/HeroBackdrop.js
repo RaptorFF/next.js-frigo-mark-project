@@ -1,19 +1,14 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function HeroBackdrop() {
-  const pathname = usePathname();
-  const isHomePage = pathname === "/";
   const [isVideoReady, setIsVideoReady] = useState(false);
 
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none fixed inset-0 z-0 transition-opacity duration-500 ${
-        isHomePage ? "opacity-100" : "opacity-0"
-      }`}
+      className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 opacity-100"
     >
       <video
         autoPlay
