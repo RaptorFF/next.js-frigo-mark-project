@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { services } from "@/app/_data/services";
+import { BLUR_DATA_URL } from "@/app/_data/media";
 
 const serviceBackgrounds = [
   "/images/ac-installation.jpeg",
@@ -71,6 +72,8 @@ export default function Services() {
                   alt=""
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA_URL}
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-blue-900/35" />

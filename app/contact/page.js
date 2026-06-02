@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ContactForm from "../_components/ContactForm";
+import { BLUR_DATA_URL } from "@/app/_data/media";
 
 export default function ContactPage() {
   return (
@@ -14,6 +15,8 @@ export default function ContactPage() {
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="object-cover"
               />
             </div>

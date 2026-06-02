@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BLUR_DATA_URL } from "@/app/_data/media";
 
 export default function AboutPage() {
   return (
@@ -15,6 +16,8 @@ export default function AboutPage() {
               alt="Ugradnja klima uredjaja"
               width={1200}
               height={720}
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
               className="float-right ml-0 md:ml-8 mb-6 md:mb-4 w-full md:w-1/2 h-80 md:h-104 object-cover rounded-2xl shadow-lg"
             />
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -42,6 +45,8 @@ export default function AboutPage() {
             alt="Servis sistema grejanja"
             width={1200}
             height={720}
+            placeholder="blur"
+            blurDataURL={BLUR_DATA_URL}
             className="float-left mr-0 md:mr-8 mb-6 md:mb-4 w-full md:w-1/2 h-80 md:h-104 object-cover rounded-2xl shadow-lg"
           />
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
