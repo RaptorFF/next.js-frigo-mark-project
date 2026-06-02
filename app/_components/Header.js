@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { BLUR_DATA_URL } from "@/app/_data/media";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -60,8 +59,6 @@ export default function Header() {
               alt="Frigomark icon"
               width={36}
               height={36}
-              placeholder="blur"
-              blurDataURL={BLUR_DATA_URL}
               className={`w-auto object-contain shrink-0 transition-all duration-500 ${
                 isCompact
                   ? "h-7 min-[390px]:h-8 min-[924px]:h-9 scale-115 min-[390px]:scale-120 min-[924px]:scale-125"
