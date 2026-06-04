@@ -51,7 +51,7 @@ export default function ServiceBooking() {
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            Rezervišite Svoju Uslugu HVAC Danas
+            Rezervišite svoju HVAC uslugu danas
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed py-4">
             Rezervišite svoj termin brzo i jednostavno
@@ -78,7 +78,7 @@ export default function ServiceBooking() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Tip Usluge *
+                Tip usluge *
               </label>
               <select
                 name="serviceType"
@@ -101,7 +101,7 @@ export default function ServiceBooking() {
             </div>
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Preferirani Datum *
+                Preferirani datum *
               </label>
               <input
                 type="date"
@@ -117,7 +117,7 @@ export default function ServiceBooking() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Preferirano Vreme *
+                Preferirano vreme *
               </label>
               <input
                 type="time"
@@ -130,7 +130,7 @@ export default function ServiceBooking() {
             </div>
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Puno Ime *
+                Puno ime *
               </label>
               <input
                 type="text"
@@ -161,7 +161,7 @@ export default function ServiceBooking() {
             </div>
             <div>
               <label className="block text-gray-700 font-semibold mb-3">
-                Broj Telefona *
+                Broj telefona *
               </label>
               <input
                 type="tel"
@@ -177,7 +177,7 @@ export default function ServiceBooking() {
 
           <div>
             <label className="block text-gray-700 font-semibold mb-3">
-              Adresa Usluge *
+              Adresa usluge *
             </label>
             <input
               type="text"
@@ -192,7 +192,7 @@ export default function ServiceBooking() {
 
           <div>
             <label className="block text-gray-700 font-semibold mb-3">
-              Dodatne Napomene
+              Dodatne napomene
             </label>
             <textarea
               name="notes"
@@ -209,7 +209,7 @@ export default function ServiceBooking() {
             disabled={loading}
             className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition text-lg shadow-md hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {loading ? "Slanje..." : "Potvrdite Rezervaciju"}
+            {loading ? "Slanje..." : "Potvrdite rezervaciju"}
           </button>
         </form>
       </div>
