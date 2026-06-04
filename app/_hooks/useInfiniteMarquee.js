@@ -2,6 +2,9 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
+const DRAG_SENSITIVITY = 1.35;
+const WHEEL_SENSITIVITY = 1.4;
+
 export function useInfiniteMarquee({ desktopDuration, mobileDuration }) {
   const trackRef = useRef(null);
   const animationFrameRef = useRef(null);
@@ -98,7 +101,7 @@ export function useInfiniteMarquee({ desktopDuration, mobileDuration }) {
       if (!dragState.isDragging) return;
 
       e.preventDefault();
-      const deltaX = e.clientX - dragState.startX;
+      const deltaX = (e.clientX - dragState.startX) * DRAG_SENSITIVITY;
       offsetRef.current = normalizeOffset(dragState.startOffset - deltaX);
       applyTransform();
     },
@@ -112,7 +115,9 @@ export function useInfiniteMarquee({ desktopDuration, mobileDuration }) {
       if (!scrollDelta) return;
 
       e.preventDefault();
-      offsetRef.current = normalizeOffset(offsetRef.current + scrollDelta);
+      offsetRef.current = normalizeOffset(
+        offsetRef.current + scrollDelta * WHEEL_SENSITIVITY,
+      );
       applyTransform();
       lastTimestampRef.current = 0;
     },
