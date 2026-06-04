@@ -1,7 +1,18 @@
+"use client";
+
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { BLUR_DATA_URL } from "@/app/_data/media";
 
 export default function Brendovi() {
+  const scrollerRef = useRef(null);
+  const dragStateRef = useRef({
+    isDragging: false,
+    startX: 0,
+    startScrollLeft: 0,
+  });
+  const [isDragging, setIsDragging] = useState(false);
+
   const brands = [
     { name: "Vox", img: "/brands/vox.png" },
     { name: "Vivax", img: "/brands/vivax.png" },
@@ -15,8 +26,37 @@ export default function Brendovi() {
     { name: "Candy", img: "/brands/candy.png" },
   ];
 
-  // Dupliramo niz za beskonačnu animaciju
+  // Dupliramo niz za neprekidnu marquee animaciju
   const marqueeBrands = [...brands, ...brands];
+
+  const handlePointerDown = (e) => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+
+    dragStateRef.current = {
+      isDragging: true,
+      startX: e.clientX,
+      startScrollLeft: scroller.scrollLeft,
+    };
+
+    setIsDragging(true);
+    scroller.setPointerCapture?.(e.pointerId);
+  };
+
+  const handlePointerMove = (e) => {
+    const scroller = scrollerRef.current;
+    const dragState = dragStateRef.current;
+    if (!scroller || !dragState.isDragging) return;
+
+    e.preventDefault();
+    const deltaX = e.clientX - dragState.startX;
+    scroller.scrollLeft = dragState.startScrollLeft - deltaX;
+  };
+
+  const stopDragging = () => {
+    dragStateRef.current.isDragging = false;
+    setIsDragging(false);
+  };
 
   return (
     <section className="section-container bg-blue-100 py-8 overflow-hidden w-full max-w-full">
@@ -24,8 +64,23 @@ export default function Brendovi() {
         <h1 className="mb-10 text-3xl font-semibold">
           Brendovi koje održavamo i ugrađujemo
         </h1>
-        <div className="overflow-hidden relative w-full marquee-fade">
-          <div className="flex w-max gap-8 animate-marquee">
+        <div
+          ref={scrollerRef}
+          className={`relative w-full overflow-x-auto marquee-fade touch-pan-x select-none [&::-webkit-scrollbar]:hidden ${
+            isDragging ? "cursor-grabbing" : "cursor-grab"
+          }`}
+          style={{ scrollbarWidth: "none" }}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={stopDragging}
+          onPointerCancel={stopDragging}
+          onPointerLeave={stopDragging}
+        >
+          <div
+            className={`flex w-max gap-8 py-2 animate-marquee marquee-mobile-slower ${
+              isDragging ? "[animation-play-state:paused]" : ""
+            }`}
+          >
             {marqueeBrands.map((brand, idx) => (
               <div
                 key={brand.name + idx}
