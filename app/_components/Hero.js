@@ -10,7 +10,7 @@ const HeroBackdrop = dynamic(() => import("./HeroBackdrop"), {
 
 export default function Hero() {
   const frigoClass =
-    "bg-linear-to-b from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent";
+    "bg-linear-to-b from-blue-500 via-blue-700 to-blue-900 md:from-blue-300 md:via-blue-500 md:to-blue-700 bg-clip-text text-transparent";
   const markClass =
     "bg-linear-to-b from-slate-100 via-slate-300 to-slate-500 bg-clip-text text-transparent";
 
