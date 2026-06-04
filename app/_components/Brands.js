@@ -33,7 +33,7 @@ export default function Brendovi() {
           Brendovi koje održavamo i ugrađujemo
         </h1>
         <div
-          className={`relative w-full overflow-hidden marquee-fade touch-pan-x select-none ${
+          className={`relative w-full overflow-hidden marquee-fade touch-pan-y select-none ${
             isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
           {...marqueeHandlers}

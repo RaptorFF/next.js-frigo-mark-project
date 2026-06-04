@@ -28,7 +28,7 @@ export default function Testimonials() {
         </div>
 
         <div
-          className={`overflow-hidden relative mx-auto w-full max-w-full marquee-fade touch-pan-x select-none ${
+          className={`overflow-hidden relative mx-auto w-full max-w-full marquee-fade touch-pan-y select-none ${
             isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
           {...marqueeHandlers}
