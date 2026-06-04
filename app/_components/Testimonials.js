@@ -1,8 +1,14 @@
 "use client";
 
 import { testimonials } from "@/app/_data/testimonials";
+import { useInfiniteMarquee } from "@/app/_hooks/useInfiniteMarquee";
 
 export default function Testimonials() {
+  const { isDragging, trackRef, marqueeHandlers } = useInfiniteMarquee({
+    desktopDuration: 38000,
+    mobileDuration: 50000,
+  });
+
   const marqueeTestimonials = [...testimonials, ...testimonials];
 
   return (
@@ -21,8 +27,16 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="overflow-hidden relative mx-auto w-full max-w-full marquee-fade">
-          <div className="flex w-max gap-4 sm:gap-6 animate-marquee marquee-mobile-slower py-2">
+        <div
+          className={`overflow-hidden relative mx-auto w-full max-w-full marquee-fade touch-pan-x select-none ${
+            isDragging ? "cursor-grabbing" : "cursor-grab"
+          }`}
+          {...marqueeHandlers}
+        >
+          <div
+            ref={trackRef}
+            className="flex w-max gap-4 sm:gap-6 py-2 will-change-transform"
+          >
             {marqueeTestimonials.map((testimonial, idx) => (
               <article
                 key={`${testimonial.id}-${idx}`}
