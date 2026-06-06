@@ -12,23 +12,50 @@ function isEnvTrue(value) {
   return ["true", "1", "yes", "on"].includes(normalized);
 }
 
+function shouldUseEmailOnlyMode() {
+  if (isEnvTrue(process.env.RESERVATIONS_EMAIL_ONLY)) return true;
+
+  const dbUrl = String(process.env.DATABASE_URL ?? "")
+    .trim()
+    .toLowerCase();
+  if (!dbUrl) return true;
+
+  // In hosted environments localhost DB is unreachable; fallback to email-only.
+  return dbUrl.includes("127.0.0.1") || dbUrl.includes("localhost");
+}
+
+function buildEmailPayload(id, data) {
+  return {
+    id,
+    serviceType: data.serviceType,
+    date: data.date,
+    time: data.time,
+    name: data.name,
+    email: data.email,
+    phone: data.phone,
+    address: data.address,
+    notes: data.notes ?? "",
+  };
+}
+
 export async function submitReservation(data) {
   const { serviceType, date, time, name, email, phone, address, notes } = data;
-  const emailOnlyMode = isEnvTrue(process.env.RESERVATIONS_EMAIL_ONLY);
+  const emailOnlyMode = shouldUseEmailOnlyMode();
 
   if (emailOnlyMode) {
     try {
-      await sendReservationEmail({
-        id: `email-${Date.now()}`,
-        serviceType,
-        date,
-        time,
-        name,
-        email,
-        phone,
-        address,
-        notes: notes ?? "",
-      });
+      await sendReservationEmail(
+        buildEmailPayload(`email-${Date.now()}`, {
+          serviceType,
+          date,
+          time,
+          name,
+          email,
+          phone,
+          address,
+          notes,
+        }),
+      );
 
       return { success: true, id: null };
     } catch (error) {
@@ -52,17 +79,18 @@ export async function submitReservation(data) {
     const reservationId = result.rows[0].id;
 
     try {
-      await sendReservationEmail({
-        id: reservationId,
-        serviceType,
-        date,
-        time,
-        name,
-        email,
-        phone,
-        address,
-        notes: notes ?? "",
-      });
+      await sendReservationEmail(
+        buildEmailPayload(reservationId, {
+          serviceType,
+          date,
+          time,
+          name,
+          email,
+          phone,
+          address,
+          notes,
+        }),
+      );
     } catch (emailError) {
       console.error("Greška pri slanju email obaveštenja:", emailError);
     }
@@ -70,7 +98,27 @@ export async function submitReservation(data) {
     return { success: true, id: reservationId };
   } catch (error) {
     console.error("Greška pri čuvanju rezervacije:", error);
-    return { success: false, error: "Došlo je do greške. Pokušajte ponovo." };
+
+    // Fallback: even if DB fails, still try to deliver reservation to owner email.
+    try {
+      await sendReservationEmail(
+        buildEmailPayload(`email-fallback-${Date.now()}`, {
+          serviceType,
+          date,
+          time,
+          name,
+          email,
+          phone,
+          address,
+          notes,
+        }),
+      );
+
+      return { success: true, id: null };
+    } catch (emailError) {
+      console.error("Greška pri fallback slanju emaila:", emailError);
+      return { success: false, error: "Došlo je do greške. Pokušajte ponovo." };
+    }
   }
 }
 
