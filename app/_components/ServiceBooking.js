@@ -24,6 +24,17 @@ const SERVICE_LABELS = {
   emergency: "Hitna usluga",
 };
 
+function normalizePayload(data) {
+  return {
+    ...data,
+    name: data.name.trim(),
+    email: data.email.trim().toLowerCase(),
+    phone: data.phone.trim(),
+    address: data.address.trim(),
+    notes: data.notes.trim(),
+  };
+}
+
 export default function ServiceBooking() {
   const [bookingData, setBookingData] = useState(EMPTY_FORM);
   const [booked, setBooked] = useState(false);
@@ -46,7 +57,7 @@ export default function ServiceBooking() {
     setBooked(false);
     setBookingSummary(null);
 
-    const payload = { ...bookingData };
+    const payload = normalizePayload(bookingData);
 
     const result = await submitReservation(payload);
 
