@@ -3,7 +3,7 @@ import Services from "./_components/Services";
 import Brands from "./_components/Brands";
 import ServiceBooking from "./_components/ServiceBooking";
 import Testimonials from "./_components/Testimonials";
-import Pricing from "./_components/Pricing";
+import WhyUs from "./_components/WhyUs";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Brands />
-      <Pricing />
+      <WhyUs />
       <Testimonials />
       <ServiceBooking />
     </>
