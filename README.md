@@ -36,3 +36,29 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Email obavestenja za rezervacije
+
+Kada korisnik posalje rezervaciju, aplikacija cuva rezervaciju u bazi i salje email vlasniku firme.
+
+Ako zelis da rezervacije idu samo na email (bez upisa u bazu), postavi:
+
+- `RESERVATIONS_EMAIL_ONLY=true`
+
+1. Napravi `.env.local` fajl na osnovu `.env.example`.
+2. Popuni SMTP podatke i `OWNER_EMAIL`.
+
+Obavezne promenljive:
+
+- `DATABASE_URL`
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_SECURE` (`true` za port 465, inace `false`)
+- `SMTP_USER`
+- `SMTP_PASS`
+- `OWNER_EMAIL`
+
+Opcione promenljive:
+
+- `MAIL_FROM` (ako nije postavljen, koristi se `SMTP_USER`)
+- `RESERVATIONS_EMAIL_ONLY` (`true` za slanje samo email-a, bez baze)

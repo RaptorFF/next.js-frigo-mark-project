@@ -14,9 +14,20 @@ const EMPTY_FORM = {
   notes: "",
 };
 
+const SERVICE_LABELS = {
+  installation: "Instalacija klima uređaja",
+  maintenance: "Održavanje HVAC sistema",
+  repair: "Popravka električnih aparata",
+  heatPump: "Instalacija i servis toplotnih pumpi",
+  cleaning: "Čišćenje kanala",
+  thermostat: "Instalacija termostata",
+  emergency: "Hitna usluga",
+};
+
 export default function ServiceBooking() {
   const [bookingData, setBookingData] = useState(EMPTY_FORM);
   const [booked, setBooked] = useState(false);
+  const [bookingSummary, setBookingSummary] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -32,17 +43,36 @@ export default function ServiceBooking() {
     e.preventDefault();
     setLoading(true);
     setError("");
+    setBooked(false);
+    setBookingSummary(null);
 
-    const result = await submitReservation(bookingData);
+    const payload = { ...bookingData };
+
+    const result = await submitReservation(payload);
 
     setLoading(false);
 
     if (result.success) {
+      setBookingSummary({
+        id: result.id,
+        serviceType: SERVICE_LABELS[payload.serviceType] ?? payload.serviceType,
+        date: payload.date,
+        time: payload.time,
+      });
       setBooked(true);
       setBookingData(EMPTY_FORM);
-      setTimeout(() => setBooked(false), 5000);
+      setTimeout(() => {
+        setBooked(false);
+        setBookingSummary(null);
+      }, 9000);
     } else {
-      setError(result.error ?? "Došlo je do greške. Pokušajte ponovo.");
+      setBooked(false);
+      setBookingSummary(null);
+      setError(
+        result.error ??
+          "Neuspešno slanje rezervacije. Proverite podatke i pokušajte ponovo.",
+      );
+      setTimeout(() => setError(""), 9000);
     }
   };
 
@@ -57,19 +87,6 @@ export default function ServiceBooking() {
             Rezervišite svoj termin brzo i jednostavno
           </p>
         </div>
-
-        {booked && (
-          <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-            ✓ Vaš termin je uspešno zakazan! Potvrdu ćete uskoro dobiti putem
-            e-pošte.
-          </div>
-        )}
-
-        {error && (
-          <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-            {error}
-          </div>
-        )}
 
         <form
           onSubmit={handleSubmit}
@@ -209,10 +226,101 @@ export default function ServiceBooking() {
             disabled={loading}
             className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition text-lg shadow-md hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {loading ? "Slanje..." : "Potvrdite rezervaciju"}
+            {loading ? "Slanje rezervacije..." : "Potvrdite rezervaciju"}
           </button>
         </form>
       </div>
+
+      {booked && bookingSummary && (
+        <div className="fixed z-50 left-4 right-4 bottom-4 sm:left-auto sm:right-6 sm:bottom-6 sm:w-full sm:max-w-md">
+          <div
+            role="status"
+            aria-live="polite"
+            className="toast-enter rounded-lg border border-green-400 bg-green-100 text-green-900 shadow-xl p-4"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="font-semibold">Rezervacija je uspešno poslata.</p>
+                <p className="mt-1 text-sm">
+                  Uskoro ćemo vas kontaktirati putem emaila ili telefona koji
+                  ste uneli.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setBooked(false);
+                  setBookingSummary(null);
+                }}
+                className="text-green-900/80 hover:text-green-900 font-semibold"
+                aria-label="Zatvori obaveštenje"
+              >
+                ✕
+              </button>
+            </div>
+            <p className="mt-2 text-sm">
+              Usluga:{" "}
+              <span className="font-medium">{bookingSummary.serviceType}</span>
+            </p>
+            <p className="text-sm">
+              Termin: <span className="font-medium">{bookingSummary.date}</span>{" "}
+              u <span className="font-medium">{bookingSummary.time}</span>
+            </p>
+            {bookingSummary.id && (
+              <p className="text-sm">Broj rezervacije: #{bookingSummary.id}</p>
+            )}
+            <p className="mt-2 text-sm">
+              Ako ne dobijete odgovor u roku od 24h, pozovite nas na
+              064/286-9648.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {error && (
+        <div className="fixed z-50 left-4 right-4 bottom-4 sm:left-auto sm:right-6 sm:bottom-6 sm:w-full sm:max-w-md">
+          <div
+            role="alert"
+            aria-live="assertive"
+            className="toast-enter rounded-lg border border-red-400 bg-red-100 text-red-900 shadow-xl p-4"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <p className="text-sm font-medium">{error}</p>
+              <button
+                type="button"
+                onClick={() => setError("")}
+                className="text-red-900/80 hover:text-red-900 font-semibold"
+                aria-label="Zatvori obaveštenje o grešci"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        .toast-enter {
+          animation: toast-enter 180ms ease-out;
+        }
+
+        @keyframes toast-enter {
+          from {
+            opacity: 0;
+            transform: translateY(10px) scale(0.98);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .toast-enter {
+            animation: none;
+          }
+        }
+      `}</style>
     </section>
   );
 }

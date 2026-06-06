@@ -1,9 +1,35 @@
 "use server";
 
 import pool from "@/lib/db";
+import { sendReservationEmail } from "@/lib/email";
 
 export async function submitReservation(data) {
   const { serviceType, date, time, name, email, phone, address, notes } = data;
+  const emailOnlyMode = process.env.RESERVATIONS_EMAIL_ONLY === "true";
+
+  if (emailOnlyMode) {
+    try {
+      await sendReservationEmail({
+        id: `email-${Date.now()}`,
+        serviceType,
+        date,
+        time,
+        name,
+        email,
+        phone,
+        address,
+        notes: notes ?? "",
+      });
+
+      return { success: true, id: null };
+    } catch (error) {
+      console.error("Greška pri slanju rezervacije na email:", error);
+      return {
+        success: false,
+        error: "Neuspešno slanje emaila. Pokušajte ponovo.",
+      };
+    }
+  }
 
   try {
     const result = await pool.query(
@@ -14,7 +40,25 @@ export async function submitReservation(data) {
       [serviceType, date, time, name, email, phone, address, notes ?? ""],
     );
 
-    return { success: true, id: result.rows[0].id };
+    const reservationId = result.rows[0].id;
+
+    try {
+      await sendReservationEmail({
+        id: reservationId,
+        serviceType,
+        date,
+        time,
+        name,
+        email,
+        phone,
+        address,
+        notes: notes ?? "",
+      });
+    } catch (emailError) {
+      console.error("Greška pri slanju email obaveštenja:", emailError);
+    }
+
+    return { success: true, id: reservationId };
   } catch (error) {
     console.error("Greška pri čuvanju rezervacije:", error);
     return { success: false, error: "Došlo je do greške. Pokušajte ponovo." };
