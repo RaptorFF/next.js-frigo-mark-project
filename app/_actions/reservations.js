@@ -3,9 +3,18 @@
 import pool from "@/lib/db";
 import { sendReservationEmail } from "@/lib/email";
 
+function isEnvTrue(value) {
+  const normalized = String(value ?? "")
+    .trim()
+    .replace(/^['\"]|['\"]$/g, "")
+    .toLowerCase();
+
+  return ["true", "1", "yes", "on"].includes(normalized);
+}
+
 export async function submitReservation(data) {
   const { serviceType, date, time, name, email, phone, address, notes } = data;
-  const emailOnlyMode = process.env.RESERVATIONS_EMAIL_ONLY === "true";
+  const emailOnlyMode = isEnvTrue(process.env.RESERVATIONS_EMAIL_ONLY);
 
   if (emailOnlyMode) {
     try {
