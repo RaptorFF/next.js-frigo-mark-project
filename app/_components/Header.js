@@ -59,10 +59,11 @@ export default function Header() {
               alt="Frigomark icon"
               width={36}
               height={36}
+              quality={100}
               className={`w-auto object-contain shrink-0 transition-all duration-500 ${
                 isCompact
-                  ? "h-7 min-[390px]:h-8 min-[924px]:h-9 scale-115 min-[390px]:scale-120 min-[924px]:scale-125"
-                  : "h-8 min-[390px]:h-10 scale-120 min-[390px]:scale-125"
+                  ? "h-7 min-[390px]:h-8 min-[924px]:h-9"
+                  : "h-8 min-[390px]:h-10"
               }`}
               priority
             />
