@@ -55,9 +55,14 @@ export default function AboutPage() {
             kućnih aparata. Naš tim poseduje znanje i iskustvo za brzo i
             efikasno rešavanje svih vrsta kvarova i održavanje ovih uređaja, uz
             korišćenje kvalitetnih delova i savremenih dijagnostičkih alata.
-            Takođe pružamo usluge održavanja i popravke toplotnih pumpi,
-            osiguravajući da vaši sistemi grejanja i hlađenja funkcionišu
-            optimalno tokom cele godine.
+          </p>
+          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            Takođe pružamo usluge ugradnje, redovnog servisa i održavanja
+            toplotnih pumpi. Bez obzira da li je potrebno postavljanje novog
+            sistema ili pregled postojećeg uređaja, naš cilj je da obezbedimo
+            pouzdan rad, optimalnu energetsku efikasnost i dug vek trajanja
+            opreme. Vodimo računa o svakom detalju, od pravilnog puštanja u rad
+            do preciznog podešavanja sistema za maksimalne performanse.
           </p>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Poverite nam brigu o vašoj klimatizaciji, rashladnim uređajima,
