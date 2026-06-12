@@ -57,13 +57,14 @@ export default function Header() {
             <Image
               src="/images/logo1.png"
               alt="Frigomark icon"
-              width={36}
-              height={36}
+              width={657}
+              height={355}
+              sizes="(max-width: 389px) 28px, (max-width: 923px) 40px, (max-width: 1279px) 48px, 56px"
               quality={100}
               className={`w-auto object-contain shrink-0 transition-all duration-500 ${
                 isCompact
-                  ? "h-7 min-[390px]:h-8 min-[924px]:h-9"
-                  : "h-8 min-[390px]:h-10"
+                  ? "h-7 min-[390px]:h-8 min-[924px]:h-9 xl:h-10"
+                  : "h-8 min-[390px]:h-10 min-[924px]:h-11 xl:h-12"
               }`}
               priority
             />
