@@ -1,6 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { submitContactMessage } from "@/app/_actions/contact";
+
+const EMPTY_FORM = {
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+};
 
 export default function ContactForm({
   withHeaderOffset = true,
@@ -8,15 +17,11 @@ export default function ContactForm({
   containerClassName = "",
   compact = false,
 }) {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(EMPTY_FORM);
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,12 +31,24 @@ export default function ContactForm({
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-    setTimeout(() => setSubmitted(false), 3000);
+    setLoading(true);
+    setError("");
+    setSubmitted(false);
+
+    const result = await submitContactMessage(formData);
+
+    setLoading(false);
+
+    if (result.success) {
+      setSubmitted(true);
+      setFormData(EMPTY_FORM);
+      setTimeout(() => setSubmitted(false), 9000);
+    } else {
+      setError(result.error ?? "Neuspešno slanje poruke. Pokušajte ponovo.");
+      setTimeout(() => setError(""), 9000);
+    }
   };
 
   return (
@@ -57,6 +74,12 @@ export default function ContactForm({
         {submitted && (
           <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
             Hvala! Uskoro ćemo vas kontaktirati.
+          </div>
+        )}
+
+        {error && (
+          <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+            {error}
           </div>
         )}
 
@@ -145,9 +168,10 @@ export default function ContactForm({
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition text-lg shadow-md hover:shadow-lg"
+            disabled={loading}
+            className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition text-lg shadow-md hover:shadow-lg disabled:cursor-not-allowed disabled:bg-blue-400"
           >
-            Pošaljite poruku
+            {loading ? "Šaljem..." : "Pošaljite poruku"}
           </button>
         </form>
       </div>
