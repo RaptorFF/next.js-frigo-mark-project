@@ -153,9 +153,8 @@ export default function ContactForm({
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
               >
                 <option value="">Izaberite uslugu</option>
-                <option value="repair">Zahtev za popravku</option>
                 <option value="installation">Usluga instalacije</option>
-                <option value="maintenance">Plan održavanja</option>
+                <option value="repair">Zahtev za popravku</option>
                 <option value="emergency">Hitna usluga</option>
                 <option value="inquiry">Opšti upit</option>
               </select>
