@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { submitContactMessage } from "@/app/_actions/contact";
 
 const EMPTY_FORM = {
@@ -22,6 +22,27 @@ export default function ContactForm({
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const statusRef = useRef(null);
+
+  useEffect(() => {
+    if (!submitted && !error) return;
+
+    statusRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    statusRef.current?.focus();
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    statusRef.current?.animate(
+      [
+        { opacity: 0, transform: "translateY(8px)" },
+        { opacity: 1, transform: "translateY(0)" },
+      ],
+      {
+        duration: 280,
+        easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+      },
+    );
+  }, [submitted, error]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -70,18 +91,6 @@ export default function ContactForm({
             Pošaljite nam poruku
           </h2>
         </div>
-
-        {submitted && (
-          <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-            Hvala! Uskoro ćemo vas kontaktirati.
-          </div>
-        )}
-
-        {error && (
-          <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-            {error}
-          </div>
-        )}
 
         <form
           onSubmit={handleSubmit}
@@ -173,6 +182,30 @@ export default function ContactForm({
           >
             {loading ? "Šaljem..." : "Pošaljite poruku"}
           </button>
+
+          {submitted && (
+            <div
+              ref={statusRef}
+              tabIndex={-1}
+              role="status"
+              aria-live="polite"
+              className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg focus:outline-none"
+            >
+              Hvala! Uskoro ćemo vas kontaktirati.
+            </div>
+          )}
+
+          {error && (
+            <div
+              ref={statusRef}
+              tabIndex={-1}
+              role="alert"
+              aria-live="assertive"
+              className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg focus:outline-none"
+            >
+              {error}
+            </div>
+          )}
         </form>
       </div>
     </section>
