@@ -75,8 +75,8 @@ export default function Header() {
                   : "text-lg min-[390px]:text-xl min-[924px]:text-2xl"
               }`}
             >
-              <span className={frigoClass}>Frigo</span>
-              <span className={markClass}>mark</span>
+              <span className={frigoClass}>FRIGO</span>
+              <span className={markClass}>MARK</span>
             </span>
           </Link>
 

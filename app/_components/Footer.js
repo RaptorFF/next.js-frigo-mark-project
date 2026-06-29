@@ -24,8 +24,8 @@ export default function Footer() {
                 className="h-8 w-auto object-contain shrink-0 scale-115"
               />
               <span className="font-extrabold tracking-tight leading-none drop-shadow-[0_1px_0_rgba(255,255,255,0.35)]">
-                <span className={frigoClass}>Frigo</span>
-                <span className={markClass}>mark</span>
+                <span className={frigoClass}>FRIGO</span>
+                <span className={markClass}>MARK</span>
               </span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
