@@ -81,14 +81,22 @@ export default function WhyUs() {
               alt="Frigomark servisni tim na terenu"
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 100vw"
-              className="object-cover object-center"
+              className="object-cover object-center hidden sm:block"
+              priority={true}
+            />
+            <Image
+              src="/images/whyUsMobileVersion.png"
+              alt="Frigomark servisni tim na terenu"
+              fill
+              sizes="(max-width: 640px) 100vw"
+              className="object-cover object-center sm:hidden"
               priority={true}
             />
             <div className="absolute inset-0 bg-linear-to-t from-slate-950/56 via-slate-950/24 to-slate-900/12" />
           </div>
 
           <div className="relative z-10 min-h-96 sm:min-h-96 lg:min-h-112 px-4 py-8 sm:px-8 lg:px-10 lg:py-10">
-            <div className="flex flex-col justify-end pt-16 sm:pt-32 lg:pt-44">
+            <div className="flex flex-col justify-end pt-28 sm:pt-32 lg:pt-44">
               <div className="mb-8 max-w-2xl">
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] bg-linear-to-b from-cyan-100 via-sky-200 to-blue-100 bg-clip-text text-transparent">
                   Frigomark servis
@@ -99,11 +107,11 @@ export default function WhyUs() {
                 </p>
               </div>
 
-              <div className="grid gap-8 md:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2 mt-16 sm:mt-12 lg:mt-0">
                 {reasons.map((reason, idx) => (
                   <article
                     key={reason.title}
-                    className={`rounded-2xl border border-white/16 bg-white/58 p-8 shadow-lg backdrop-blur-sm transform transition-all duration-700 ease-out ${
+                    className={`rounded-2xl border border-white/16 bg-white/35 p-8 shadow-lg backdrop-blur-md transform transition-all duration-700 ease-out ${
                       isVisible
                         ? "translate-y-0 opacity-100"
                         : "translate-y-8 opacity-0"
