@@ -6,8 +6,8 @@ export const services = [
       "Profesionalna instalacija novih klima uređaja uz podršku stručnih tehničara",
     icon: "❄️",
     features: [
-      "Instalacija istog dana",
-      "10-godišnja garancija",
+      "Instalacija u najkraćem roku",
+      "Prilagođeni sistemi za vaš prostor",
       "Energetski efikasni modeli",
     ],
   },
