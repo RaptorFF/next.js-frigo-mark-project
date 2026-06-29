@@ -89,7 +89,7 @@ export default function WhyUs() {
               alt="Frigomark servisni tim na terenu"
               fill
               sizes="(max-width: 640px) 100vw"
-              className="object-cover object-center sm:hidden"
+              className="object-cover object-left sm:hidden"
               priority={true}
             />
             <div className="absolute inset-0 bg-linear-to-t from-slate-950/56 via-slate-950/24 to-slate-900/12" />
