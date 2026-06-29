@@ -69,8 +69,73 @@ export default function WhyUs() {
           </p>
         </div>
 
+        {/* Mobile layout */}
+        <div className="sm:hidden rounded-3xl overflow-hidden shadow-xl ring-1 ring-blue-200/80">
+          <div className="relative w-full aspect-3/4 bg-linear-to-br from-slate-700 via-slate-800 to-slate-950">
+            <Image
+              src="/images/whyUsMobileVersion.png"
+              alt="Frigomark servisni tim na terenu"
+              fill
+              sizes="100vw"
+              className="object-cover object-left"
+              priority={true}
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-slate-950/56 via-slate-950/24 to-slate-900/12" />
+            <div className="absolute bottom-0 left-0 right-0 px-4 pb-4 pt-8 bg-linear-to-t from-slate-950/80 to-transparent">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] bg-linear-to-b from-cyan-100 via-sky-200 to-blue-100 bg-clip-text text-transparent">
+                Frigomark servis
+              </p>
+              <p className="mt-2 text-lg leading-relaxed text-blue-50/95">
+                Pouzdan tim koji brzo izlazi na teren i rešava problem bez
+                nepotrebnog čekanja.
+              </p>
+            </div>
+          </div>
+          <div className="grid gap-4 p-4 bg-slate-900">
+            {reasons.map((reason, idx) => (
+              <article
+                key={reason.title}
+                className={`rounded-2xl border border-white/16 bg-white/35 p-6 shadow-lg backdrop-blur-md transform transition-all duration-700 ease-out ${
+                  isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-8 opacity-0"
+                }`}
+                style={{ transitionDelay: `${idx * 160}ms` }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white shadow-md">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className="h-7 w-7"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M20 7L10 17L5 12"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
+                      {reason.title}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed text-sm">
+                      {reason.description}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop layout */}
         <div
-          className={`relative overflow-hidden rounded-3xl shadow-xl ring-1 ring-blue-200/80 transform transition-all duration-700 ease-out w-full ${
+          className={`relative hidden sm:block overflow-hidden rounded-3xl shadow-xl ring-1 ring-blue-200/80 transform transition-all duration-700 ease-out w-full ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -80,23 +145,15 @@ export default function WhyUs() {
               src="/images/workStation.png"
               alt="Frigomark servisni tim na terenu"
               fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 100vw"
-              className="object-cover object-center hidden sm:block"
-              priority={true}
-            />
-            <Image
-              src="/images/whyUsMobileVersion.png"
-              alt="Frigomark servisni tim na terenu"
-              fill
-              sizes="(max-width: 640px) 100vw"
-              className="object-cover object-left sm:hidden"
+              sizes="(max-width: 1024px) 90vw, 100vw"
+              className="object-cover object-center"
               priority={true}
             />
             <div className="absolute inset-0 bg-linear-to-t from-slate-950/56 via-slate-950/24 to-slate-900/12" />
           </div>
 
-          <div className="relative z-10 min-h-96 sm:min-h-96 lg:min-h-112 px-4 py-8 sm:px-8 lg:px-10 lg:py-10">
-            <div className="flex flex-col justify-end pt-28 sm:pt-32 lg:pt-44">
+          <div className="relative z-10 sm:min-h-96 lg:min-h-112 px-4 py-8 sm:px-8 lg:px-10 lg:py-10">
+            <div className="flex flex-col justify-end h-full pt-28 sm:pt-32 lg:pt-44">
               <div className="mb-8 max-w-2xl">
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] bg-linear-to-b from-cyan-100 via-sky-200 to-blue-100 bg-clip-text text-transparent">
                   Frigomark servis
