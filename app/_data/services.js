@@ -18,7 +18,7 @@ export const services = [
       "Redovno održavanje kako bi vaši sistemi radili glatko tokom cele godine",
     icon: "🔧",
     features: [
-      "Sezonsko čišćenjes",
+      "Sezonsko čišćenje",
       "Zamena filtera",
       "Optimizacija performansi",
     ],
