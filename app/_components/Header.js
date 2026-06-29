@@ -55,7 +55,7 @@ export default function Header() {
             className="flex items-center gap-1 min-[390px]:gap-2 min-[924px]:gap-3 hover:opacity-90 transition-all duration-500"
           >
             <Image
-              src="/images/logo1.png"
+              src="/images/frigomark-logo.png"
               alt="Frigomark icon"
               width={657}
               height={355}

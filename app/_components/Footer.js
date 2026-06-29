@@ -17,7 +17,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2 leading-tight">
               <Image
-                src="/images/logo1.png"
+                src="/images/frigomark-logo.png"
                 alt="Frigomark icon"
                 width={36}
                 height={36}
