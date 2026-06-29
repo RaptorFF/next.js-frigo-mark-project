@@ -70,8 +70,16 @@ export default function WhyUs() {
         </div>
 
         {/* Mobile layout */}
-        <div className="sm:hidden rounded-3xl overflow-hidden shadow-xl ring-1 ring-blue-200/80">
-          <div className="relative w-full aspect-3/4 bg-linear-to-br from-slate-700 via-slate-800 to-slate-950">
+        <div
+          className={`sm:hidden rounded-3xl overflow-hidden shadow-xl ring-1 ring-blue-200/80 transform transition-all duration-700 ease-out ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
+          <div
+            className={`relative w-full aspect-3/4 bg-linear-to-br from-slate-700 via-slate-800 to-slate-950 transform transition-all duration-1000 ease-out ${
+              isVisible ? "scale-100 opacity-100" : "scale-105 opacity-0"
+            }`}
+          >
             <Image
               src="/images/whyUsMobileVersion.png"
               alt="Frigomark servisni tim na terenu"
@@ -81,7 +89,13 @@ export default function WhyUs() {
               priority={true}
             />
             <div className="absolute inset-0 bg-linear-to-t from-slate-950/56 via-slate-950/24 to-slate-900/12" />
-            <div className="absolute bottom-0 left-0 right-0 px-4 pb-4 pt-8 bg-linear-to-t from-slate-950/80 to-transparent">
+            <div
+              className={`absolute bottom-0 left-0 right-0 px-4 pb-4 pt-8 bg-linear-to-t from-slate-950/80 to-transparent transform transition-all duration-700 ease-out delay-300 ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-4 opacity-0"
+              }`}
+            >
               <p className="text-sm font-semibold uppercase tracking-[0.28em] bg-linear-to-b from-cyan-100 via-sky-200 to-blue-100 bg-clip-text text-transparent">
                 Frigomark servis
               </p>
