@@ -123,7 +123,7 @@ export default function WhyUs() {
                     <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
                       {reason.title}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed text-sm">
+                    <p className="text-gray-900 leading-relaxed text-sm font-medium">
                       {reason.description}
                     </p>
                   </div>
@@ -196,7 +196,7 @@ export default function WhyUs() {
                         <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
                           {reason.title}
                         </h3>
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="text-gray-900 leading-relaxed font-medium">
                           {reason.description}
                         </p>
                       </div>
