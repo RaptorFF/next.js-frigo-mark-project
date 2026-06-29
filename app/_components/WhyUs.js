@@ -87,7 +87,7 @@ export default function WhyUs() {
             <div className="absolute inset-0 bg-linear-to-t from-slate-950/56 via-slate-950/24 to-slate-900/12" />
           </div>
 
-          <div className="relative z-10 min-h-64 sm:min-h-96 lg:min-h-112 px-4 py-8 sm:px-8 lg:px-10 lg:py-10">
+          <div className="relative z-10 min-h-96 sm:min-h-96 lg:min-h-112 px-4 py-8 sm:px-8 lg:px-10 lg:py-10">
             <div className="flex flex-col justify-end pt-16 sm:pt-32 lg:pt-44">
               <div className="mb-8 max-w-2xl">
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] bg-linear-to-b from-cyan-100 via-sky-200 to-blue-100 bg-clip-text text-transparent">
