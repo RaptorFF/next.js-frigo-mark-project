@@ -262,15 +262,6 @@ export default function Header() {
             >
               Kontakt
             </Link>
-            <Link
-              href="/serviceBooking"
-              className="w-full bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition"
-              onClick={() => {
-                setMobileMenuOpen(false);
-              }}
-            >
-              Zakažite termin
-            </Link>
           </nav>
         )}
       </div>

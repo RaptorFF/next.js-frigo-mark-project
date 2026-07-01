@@ -64,7 +64,7 @@ export default function ContactPage() {
                   </a>
                 </p>
                 <p>
-                  <span className="font-bold">Radno vrijeme:</span> Pon-Pet
+                  <span className="font-bold">Radno vreme:</span> Pon-Pet
                   09:00-17:00
                 </p>
               </div>
