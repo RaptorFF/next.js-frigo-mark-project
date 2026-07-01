@@ -1,9 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function HeroBackdrop() {
   const [isVideoReady, setIsVideoReady] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Osiguraj da video počinje automatski
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Ako autoplay ne uspije, pokušaj opet
+          video.play();
+        });
+      }
+    }
+  }, []);
 
   return (
     <div
@@ -11,6 +26,7 @@ export default function HeroBackdrop() {
       className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 opacity-100"
     >
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop

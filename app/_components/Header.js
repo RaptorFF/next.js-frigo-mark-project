@@ -11,7 +11,7 @@ export default function Header() {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
+  const isHomePage = pathname === "/" || pathname === "/contact";
   const isScrolled = !isTop;
   const isCompact = (!isHomePage || isScrolled) && !mobileMenuOpen;
   const shouldUseSolidHeader = !isHomePage || isScrolled || mobileMenuOpen;
