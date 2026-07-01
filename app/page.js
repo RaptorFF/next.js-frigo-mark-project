@@ -1,7 +1,6 @@
 import Hero from "./_components/Hero";
 import Services from "./_components/Services";
 import Brands from "./_components/Brands";
-import ServiceBooking from "./_components/ServiceBooking";
 import Testimonials from "./_components/Testimonials";
 import WhyUs from "./_components/WhyUs";
 
@@ -13,7 +12,6 @@ export default function Home() {
       <Brands />
       <WhyUs />
       <Testimonials />
-      <ServiceBooking />
     </>
   );
 }

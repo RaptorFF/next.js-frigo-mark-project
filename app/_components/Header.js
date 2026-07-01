@@ -144,14 +144,6 @@ export default function Header() {
             <Link href="/contact" className={desktopNavItemClass}>
               Kontakt
             </Link>
-            <Link
-              href="/serviceBooking"
-              className={`bg-white text-blue-600 rounded-lg font-bold hover:bg-blue-50 transition-all duration-500 shadow-md hover:shadow-lg ${
-                isCompact ? "px-4 py-2 xl:px-6" : "px-5 py-2.5 xl:px-8 xl:py-3"
-              }`}
-            >
-              Zakažite termin
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}

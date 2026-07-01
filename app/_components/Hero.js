@@ -31,12 +31,6 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-5 fade-in-up [animation-delay:550ms] [animation-fill-mode:both]">
           <Link
-            href="/serviceBooking"
-            className="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold hover:bg-blue-50 transition transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
-          >
-            Zakažite termin
-          </Link>
-          <Link
             href="/about"
             className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition"
           >
