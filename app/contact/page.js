@@ -42,7 +42,13 @@ export default function ContactPage() {
               </p>
               <div className="text-gray-950 text-base md:text-lg space-y-3 font-medium mb-6">
                 <p>
-                  <span className="font-bold">Telefon:</span> 064/286-9648
+                  <span className="font-bold">Telefon:</span>{" "}
+                  <a
+                    href="tel:+381642869648"
+                    className="text-blue-600 hover:text-blue-700 underline transition"
+                  >
+                    064/286-9648
+                  </a>
                 </p>
                 <p>
                   <span className="font-bold">Adresa:</span> Subotička 12, Niš,
@@ -50,13 +56,26 @@ export default function ContactPage() {
                 </p>
                 <p>
                   <span className="font-bold">Email:</span>{" "}
-                  aleksandarm985@gmail.com
+                  <a
+                    href="mailto:aleksandarm985@gmail.com"
+                    className="text-blue-600 hover:text-blue-700 underline transition"
+                  >
+                    aleksandarm985@gmail.com
+                  </a>
                 </p>
                 <p>
                   <span className="font-bold">Radno vrijeme:</span> Pon-Pet
                   09:00-17:00
                 </p>
               </div>
+
+              {/* CTA Dugme */}
+              <a
+                href="tel:+381642869648"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-center transition duration-300"
+              >
+                Pozovi Sada
+              </a>
             </article>
 
             {/* Desna kartica - Mapa */}
