@@ -21,7 +21,7 @@ export default function ContactPage() {
       </div>
 
       {/* Sadržaj - kartice */}
-      <div className="relative z-10 w-full mx-auto px-8 md:px-10 py-8">
+      <div className="relative z-10 w-full mx-auto px-4 md:px-10 py-8 pt-24 md:pt-32">
         <div className="max-w-450 mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight text-center">
             Kontaktirajte nas
@@ -30,7 +30,7 @@ export default function ContactPage() {
             Pozovite nas ili pronađite našu lokaciju
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-22 mt-16 pt-10 px-8 md:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-22 mt-8 md:mt-16 md:pt-10 md:px-16">
             {/* Leva kartica - Kontakt podaci */}
             <article className="rounded-2xl border border-white/16 bg-white/75 p-6 md:p-8 shadow-2xl backdrop-blur-md transition-all duration-300">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-950 mb-3 tracking-tight">
