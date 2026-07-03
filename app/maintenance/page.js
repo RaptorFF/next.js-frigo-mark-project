@@ -12,7 +12,7 @@ export default function MaintenancePage() {
           </h1>
           <div className="overflow-hidden">
             <Image
-              src="/images/ac-service.jpg"
+              src="/images/ac-washing1.png"
               alt="Servisiranje klima uređaja"
               width={1200}
               height={720}
