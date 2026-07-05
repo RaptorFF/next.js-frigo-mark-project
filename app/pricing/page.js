@@ -10,17 +10,17 @@ const categories = [
       {
         name: "Montaža klime 9 i 12 BTU",
         note: "doplata po dužnom metru cevi 2.000 RSD",
-        price: "8.000 RSD",
+        price: "15.000 RSD",
       },
       {
         name: "Montaža klime 18 BTU",
         note: "doplata po dužnom metru cevi 2.400 RSD",
-        price: "10.000 RSD",
+        price: "20.000 RSD",
       },
       {
         name: "Montaža klime 24 BTU",
         note: "doplata po dužnom metru cevi 2.800 RSD",
-        price: "12.000 RSD",
+        price: "20.000 RSD",
       },
     ],
   },
@@ -32,17 +32,17 @@ const categories = [
       {
         name: "Standardna montaža do 3,5 kW",
         note: "uključuje do 3m cevi, jedan zidni prolaz, vakumiranje i puštanje u rad",
-        price: "12.000 RSD",
+        price: "15.000 RSD",
       },
       {
         name: "Standardna montaža 3,5–5 kW",
         note: "uključuje do 3m cevi, jedan zidni prolaz, vakumiranje i puštanje u rad",
-        price: "14.000 RSD",
+        price: "20.000 RSD",
       },
       {
         name: "Standardna montaža 5–7 kW",
         note: "uključuje do 3m cevi, jedan zidni prolaz, vakumiranje i puštanje u rad",
-        price: "16.000 RSD",
+        price: "20.000 RSD",
       },
       {
         name: "Dodatni metar bakarne cevi",
