@@ -9,18 +9,18 @@ const categories = [
     rows: [
       {
         name: "Montaža klime 9 i 12 BTU",
-        note: "doplata po dužnom metru cevi 2.000 RSD",
+        note: "doplata po dužnom metru cevi 2.500 RSD",
         price: "15.000 RSD",
       },
       {
         name: "Montaža klime 18 BTU",
-        note: "doplata po dužnom metru cevi 2.400 RSD",
+        note: "doplata po dužnom metru cevi 3.000 RSD",
         price: "20.000 RSD",
       },
       {
         name: "Montaža klime 24 BTU",
-        note: "doplata po dužnom metru cevi 2.800 RSD",
-        price: "20.000 RSD",
+        note: "doplata po dužnom metru cevi 3.500 RSD",
+        price: "25.000 RSD",
       },
     ],
   },
@@ -32,22 +32,22 @@ const categories = [
       {
         name: "Standardna montaža do 3,5 kW",
         note: "uključuje do 3m cevi, jedan zidni prolaz, vakumiranje i puštanje u rad",
-        price: "15.000 RSD",
+        price: "17.000 RSD",
       },
       {
         name: "Standardna montaža 3,5–5 kW",
         note: "uključuje do 3m cevi, jedan zidni prolaz, vakumiranje i puštanje u rad",
-        price: "20.000 RSD",
+        price: "22.000 RSD",
       },
       {
         name: "Standardna montaža 5–7 kW",
         note: "uključuje do 3m cevi, jedan zidni prolaz, vakumiranje i puštanje u rad",
-        price: "20.000 RSD",
+        price: "27.000 RSD",
       },
       {
         name: "Dodatni metar bakarne cevi",
         note: "za svaki metar preko standarda",
-        price: "2.000 RSD",
+        price: "2.500 RSD",
       },
     ],
   },
@@ -60,17 +60,17 @@ const categories = [
       {
         name: "Servis klime 9 i 12 BTU",
         note: "redovan godišnji servis",
-        price: "od 1.500 RSD",
+        price: "od 2.500 RSD",
       },
       {
         name: "Servis klime 18 BTU",
         note: "redovan godišnji servis",
-        price: "od 3.000 RSD",
+        price: "od 3.500 RSD",
       },
       {
         name: "Servis klime 24 BTU",
         note: "redovan godišnji servis",
-        price: "od 3.500 RSD",
+        price: "od 4.500 RSD",
       },
     ],
   },
@@ -83,18 +83,18 @@ const categories = [
       {
         name: "Demontaža klima uređaja 9–18 BTU",
         note: "",
-        price: "3.500 RSD",
+        price: "4.500 RSD",
       },
-      { name: "Demontaža klima uređaja 24 BTU", note: "", price: "5.000 RSD" },
+      { name: "Demontaža klima uređaja 24 BTU", note: "", price: "6.000 RSD" },
       {
         name: "Premeštanje spoljne jedinice",
         note: "",
-        price: "6.000 – 8.000 RSD",
+        price: "8.000 – 12.000 RSD",
       },
       {
         name: "Premeštanje unutrašnje jedinice",
         note: "",
-        price: "6.000 – 8.000 RSD",
+        price: "8.000 – 12.000 RSD",
       },
     ],
   },
@@ -104,23 +104,23 @@ const categories = [
     subtitle:
       "Cene popravki zavise od dijagnoze; konačna cena se dogovara na licu mesta",
     rows: [
-      { name: "Zamena kondenzatora", note: "", price: "4.000 – 5.000 RSD" },
+      { name: "Zamena kondenzatora", note: "", price: "5.000 – 7.000 RSD" },
       {
         name: "Punjenje prazne klime",
         note: "cena bez rashladnog sredstva",
-        price: "od 6.000 RSD",
+        price: "od 8.000 RSD",
       },
       {
         name: "Zamena senzora temperature",
         note: "",
-        price: "4.000 – 5.000 RSD",
+        price: "5.000 – 7.000 RSD",
       },
       {
         name: "Zamena starter kompresora",
         note: "",
-        price: "4.000 – 5.000 RSD",
+        price: "5.000 – 7.000 RSD",
       },
-      { name: "Zamena holendera", note: "", price: "1.000 RSD" },
+      { name: "Zamena holendera", note: "", price: "1.500 RSD" },
       { name: "Popravka elektronike", note: "", price: "po dogovoru" },
     ],
   },
@@ -129,31 +129,31 @@ const categories = [
     title: "Ostale usluge",
     subtitle: "Građevinski radovi i materijal koji prate montažu ili servis",
     rows: [
-      { name: "Bušenje rupe u betonu", note: "", price: "1.500 RSD" },
+      { name: "Bušenje rupe u betonu", note: "", price: "2.000 RSD" },
       {
         name: "Štemovanje zida (cigla/blok)",
         note: "naplata po dužnom metru",
-        price: "1.200 RSD / m",
+        price: "1.800 RSD / m",
       },
       {
         name: "Kondenz crevo",
         note: "naplata po započetom metru",
-        price: "500 RSD / m",
+        price: "700 RSD / m",
       },
       {
         name: "Zamena izolacije na bakarnim cevima",
         note: "naplata po dužnom metru",
-        price: "500 RSD / m",
+        price: "700 RSD / m",
       },
       {
         name: "Napojni kabl 3×1,5",
         note: "naplata po započetom metru",
-        price: "500 RSD / m",
+        price: "700 RSD / m",
       },
       {
         name: "Postavljanje lule i kondenz creva na spoljnoj jedinici",
         note: "",
-        price: "3.000 RSD",
+        price: "3.500 RSD",
       },
     ],
   },
@@ -167,27 +167,27 @@ const categories = [
       {
         name: "Dijagnostika kvara (veš mašina/šporet)",
         note: "izlazak na teren i utvrđivanje kvara",
-        price: "2.000 RSD",
+        price: "2.500 RSD",
       },
       {
         name: "Zamena grejača na veš mašini",
         note: "cena bez dela, uključuje rad",
-        price: "od 3.500 RSD",
+        price: "od 5.000 RSD",
       },
       {
         name: "Zamena pumpe za vodu (veš mašina)",
         note: "cena bez dela, uključuje rad",
-        price: "od 3.500 RSD",
+        price: "od 5.000 RSD",
       },
       {
         name: "Popravka električnog šporeta",
         note: "zamena ringle, termostata, prekidača i sl.",
-        price: "od 2.500 RSD",
+        price: "od 3.500 RSD",
       },
       {
         name: "Zamena programatora (veš mašina)",
         note: "cena bez dela, uključuje rad",
-        price: "po dogovoru",
+        price: "od 6.000 RSD",
       },
       {
         name: "Ostale popravke električnih uređaja",
@@ -211,9 +211,9 @@ export default function PricingPage() {
             Cenovnik usluga
           </h1>
           <p className="text-lg text-gray-700 leading-relaxed mb-10">
-            Transparentne cene bez skrivenih troškova. Cene su okvirne i mogu
-            varirati u zavisnosti od modela uređaja i uslova ugradnje. Cene su
-            bez PDV-a.
+            Transparentne cene bez skrivenih troškova. Cene su okvirne,
+            usklađene sa trenutnim tržištem i mogu varirati u zavisnosti od
+            modela uređaja i uslova ugradnje. Cene su bez PDV-a.
           </p>
         </div>
         {categories.map((cat) => (
