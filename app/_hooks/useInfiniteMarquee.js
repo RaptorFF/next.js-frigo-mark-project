@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const DRAG_SENSITIVITY = 1.35;
+const MOBILE_DRAG_SENSITIVITY = 2.1;
 const WHEEL_SENSITIVITY = 1.4;
 
 export function useInfiniteMarquee({ desktopDuration, mobileDuration }) {
@@ -101,7 +102,9 @@ export function useInfiniteMarquee({ desktopDuration, mobileDuration }) {
       if (!dragState.isDragging) return;
 
       e.preventDefault();
-      const deltaX = (e.clientX - dragState.startX) * DRAG_SENSITIVITY;
+      const dragSensitivity =
+        e.pointerType === "touch" ? MOBILE_DRAG_SENSITIVITY : DRAG_SENSITIVITY;
+      const deltaX = (e.clientX - dragState.startX) * dragSensitivity;
       offsetRef.current = normalizeOffset(dragState.startOffset - deltaX);
       applyTransform();
     },
