@@ -84,7 +84,7 @@ export default function WhyUs() {
               src="/images/whyUsMobileVersion.png"
               alt="Frigomark servisni tim na terenu"
               fill
-              sizes="100vw"
+              sizes="(max-width: 639px) calc(100vw - 3rem), 0px"
               className="object-cover object-left"
               priority={true}
             />
