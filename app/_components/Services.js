@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaWrench } from "react-icons/fa";
 
 import { services } from "@/app/_data/services";
 import { BLUR_DATA_URL } from "@/app/_data/media";
@@ -79,7 +80,11 @@ export default function Services() {
                 <div className="absolute inset-0 bg-blue-900/35" />
                 <div className="relative z-10 h-full flex items-start justify-start p-4 md:p-5">
                   <div className="text-4xl inline-flex items-center justify-center w-16 h-16 bg-white/85 backdrop-blur-xs rounded-lg shadow-sm">
-                    {service.icon}
+                    {service.id === 2 ? (
+                      <FaWrench className="text-slate-800" aria-label="Alat" />
+                    ) : (
+                      service.icon
+                    )}
                   </div>
                 </div>
               </div>
