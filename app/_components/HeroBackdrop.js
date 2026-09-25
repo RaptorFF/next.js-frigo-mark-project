@@ -38,7 +38,7 @@ export default function HeroBackdrop() {
           isVideoReady ? "blur-0 scale-100" : "blur-md scale-105"
         }`}
       >
-        <source src="/video/airflow.mp4" type="video/mp4" />
+        <source src="/video/AirFlow1.mp4" type="video/mp4" />
       </video>
 
       {!isVideoReady && (
