@@ -29,7 +29,7 @@ export default function Footer() {
               </span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Vaš pouzdani HVAC servis provajder već više od 20 godina.
+              Vaš pouzdani HVAC servis provajder već više od 15 godina.
             </p>
             <p className="text-gray-400 mt-4 text-sm">
               📞{" "}
