@@ -58,7 +58,7 @@ export default function ContactPage() {
                   <span className="font-bold">Email:</span>{" "}
                   <a
                     href="mailto:aleksandarm985@gmail.com"
-                    className="text-blue-600 hover:text-blue-700 underline transition"
+                    className="break-all text-blue-600 hover:text-blue-700 underline transition"
                   >
                     aleksandarm985@gmail.com
                   </a>
