@@ -7,7 +7,7 @@ export default function ContactPage() {
       {/* Pozadina - slika */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/ac-background.webp"
+          src="/images/contact-background.jpg"
           alt="Pozadina"
           fill
           priority
