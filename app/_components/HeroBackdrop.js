@@ -13,7 +13,7 @@ export default function HeroBackdrop() {
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch(() => {
-          // Ako autoplay ne uspije, pokušaj opet
+          // Ako autoplay ne uspe, pokušaj opet
           video.play();
         });
       }
