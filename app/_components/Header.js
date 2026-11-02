@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -10,6 +10,8 @@ export default function Header() {
   const [isTop, setIsTop] = useState(true);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const mobileNavRef = useRef(null);
+  const mobileMenuButtonRef = useRef(null);
   const pathname = usePathname();
   const isHomePage = pathname === "/" || pathname === "/contact";
   const isScrolled = !isTop;
@@ -33,6 +35,23 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const handlePointerDown = (event) => {
+      if (
+        !mobileNavRef.current?.contains(event.target) &&
+        !mobileMenuButtonRef.current?.contains(event.target)
+      ) {
+        setMobileMenuOpen(false);
+        setMobileServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, [mobileMenuOpen]);
 
   return (
     <header
@@ -148,8 +167,14 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
+            ref={mobileMenuButtonRef}
             className="min-[924px]:hidden text-white"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() => {
+              setMobileMenuOpen((isOpen) => {
+                if (isOpen) setMobileServicesOpen(false);
+                return !isOpen;
+              });
+            }}
           >
             <svg
               className="w-5 h-5 min-[390px]:w-6 min-[390px]:h-6"
@@ -169,7 +194,10 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="min-[924px]:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 px-3 min-[390px]:px-4 text-lg font-medium bg-linear-to-r from-blue-600 to-blue-800">
+          <nav
+            ref={mobileNavRef}
+            className="min-[924px]:hidden pb-6 space-y-4 border-t border-blue-700 pt-4 px-3 min-[390px]:px-4 text-lg font-medium bg-linear-to-r from-blue-600 to-blue-800"
+          >
             <Link
               href="/about"
               className="block px-4 py-2 hover:text-blue-100 transition"
