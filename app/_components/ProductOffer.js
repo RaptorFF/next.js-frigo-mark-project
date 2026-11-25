@@ -5,7 +5,7 @@ import { BLUR_DATA_URL } from "@/app/_data/media";
 const products = [
   { name: "Vox", image: "/brands/vox.png" },
   { name: "Vivax", image: "/brands/vivax.png" },
-  { name: "Samsung", image: "/brands/samsung.png" },
+  { name: "Gorenje", image: "/brands/gorenje.png" },
 ];
 
 export default function ProductOffer() {
